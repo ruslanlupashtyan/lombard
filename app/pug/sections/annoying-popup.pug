@@ -1,0 +1,15 @@
+.popup 
+  .popup__wrapper 
+    .container 
+      .popup__inner 
+        button.close 
+          include ../../images/svg/close-popup.svg
+        .popup__image 
+          .popup__title 
+            h4 Зв’яжіться з нами та отримайте безкоштовну консультацію
+        form.popup__form 
+          p Введіть Ваше Ім’я та номер телефону, і ми з Вами зв’яжемось.
+          .flex
+            input(type="text", placeholder="Ім'я" autocomplete="name")
+            input#popup-phone(type="tel", placeholder="Номер телефону" autocomplete="tel")
+          button(type="submit" onClick="goToSuccess()").btn.btn_secondary.btn_large Надіслати

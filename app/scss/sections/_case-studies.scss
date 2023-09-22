@@ -1,0 +1,224 @@
+.case {
+  background-color: $black-color;
+  padding: 88px 0 123px;
+
+  @include media-breakpoint-down(lg) {
+    padding: 48px 0 60px;
+  }
+
+  &__title {
+    white-space: nowrap;
+  }
+
+  &__subtitle {
+    text-align: right;
+    color: $silver-color;
+    @include font(16, 25, 400);
+    width: 100%;
+    max-width: 385px;
+
+    @include media-breakpoint-down(lg) {
+      max-width: 100%;
+      text-align: left;
+      @include font(14, 22, 400);
+    }
+  }
+
+  .slide {
+    position: relative;
+    padding: 40px 24px;
+    background-image: var(--bg-img);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 513px;
+    width: 25%;
+    transition: linear 300ms;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: radial-gradient(
+        65.66% 39.77% at 65.66% 39.86%,
+        rgba(18, 18, 18, 0.11) 0%,
+        rgba(18, 18, 18, 0.74) 100%
+      );
+    }
+    &.opacied {
+      opacity: 0.4;
+    }
+    &__title,
+    &__subtitle p {
+      position: relative;
+      text-transform: uppercase;
+      color: #fff;
+      z-index: 1;
+      transition: linear 300ms;
+    }
+
+    &__title {
+      margin-bottom: 12px;
+    }
+
+    &__subtitle p {
+      @include font(14, 22, 400);
+      margin-bottom: 12px;
+
+      &:last-child {
+        margin-bottom: unset;
+      }
+    }
+
+    .btn {
+      position: absolute;
+      top: calc(50% - 26px);
+      left: calc(50% - 102px);
+      z-index: 1;
+      opacity: 0;
+
+      @include media-breakpoint-down(md) {
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: transparent;
+        color: transparent;
+        border: transparent;
+        border-radius: 0;
+      }
+    }
+
+    &:hover {
+      &::before {
+        background: radial-gradient(
+          65.66% 39.77% at 65.66% 39.86%,
+          rgba(18, 18, 18, 0.36) 0%,
+          rgba(18, 18, 18, 0.58) 100%
+        );
+      }
+
+      .btn {
+        opacity: 1;
+      }
+
+      h5,
+      p,
+      .slide__results {
+        opacity: 0;
+
+        @include media-breakpoint-down(md) {
+          opacity: unset;
+        }
+      }
+    }
+
+    @include media-breakpoint-down(sm) {
+      height: 330px;
+      padding: 24px 15px;
+    }
+  }
+
+  .swiper-pagination {
+    position: relative;
+
+    &-bullet {
+      width: 24px;
+      height: 3px;
+      border-radius: unset;
+      background-color: $dark-gray-color;
+      margin-right: 15px;
+
+      &-active {
+        background-color: $light-gray-color;
+      }
+    }
+
+    @include media-breakpoint-down(lg) {
+      display: none;
+    }
+  }
+
+  .swiper-wrapper {
+    padding: 31px 0 34px;
+
+    @include media-breakpoint-down(lg) {
+      padding: 29px 0 0;
+    }
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 51px;
+    height: 51px;
+    border-radius: 50%;
+    background-color: #fff;
+
+    &::after {
+      content: none;
+    }
+  }
+
+  .swiper-button-prev {
+    transform: rotate(180deg);
+  }
+
+  .swiper-button-disabled {
+    display: none;
+  }
+}
+.case-results {
+  &__title {
+    padding: 20px 40px;
+    @include font(24, 34, 400);
+    text-transform: uppercase;
+    color: #fff;
+    background: #958677;
+    border: 1px solid #bfbfbf;
+  }
+  &__item {
+    img {
+      width: 100%;
+    }
+    &.opacied {
+      &::before {
+        opacity: 0.9;
+      }
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: radial-gradient(
+        65.66% 39.77% at 65.66% 39.86%,
+        rgba(18, 18, 18, 0.11) 0%,
+        rgba(18, 18, 18, 0.74) 100%
+      );
+      opacity: 0.3;
+    }
+  }
+  .swiper-btn.swiper-button-next,
+  .swiper-btn.swiper-button-prev {
+    width: 51px;
+    height: 51px;
+    border-radius: 50%;
+    background-color: #fff;
+  }
+  .swiper-btn.swiper-button-next:after,
+  .swiper-btn.swiper-button-prev:after {
+    content: none;
+  }
+  .swiper-button-disabled {
+    display: none;
+  }
+  .swiper-btn.swiper-button-prev {
+    transform: rotate(180deg);
+  }
+}

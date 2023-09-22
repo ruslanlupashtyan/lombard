@@ -1,0 +1,100 @@
+- var title = 'ZHAR | Квартира «Старий фонд»'
+-
+  var nav = [
+    {
+      title: 'Послуги',
+      link: '/#services'
+    },
+    {
+      title: 'Про нас',
+      link: '/#about-us'
+    },
+    {
+      title: 'Наші кейси',
+      link: '/#cases'
+    },
+    {
+      title: 'Відгуки',
+      link: '/#feedback'
+    },
+    {
+      title: 'Команда',
+      link: '/#team'
+    },
+    {
+      title: 'Питання',
+      link: '/#faq'
+    }
+  ]
+-
+  var item = {
+    bg: '/images/cases/case6.webp',
+    title: 'Квартира «Старий фон»',
+    subtitle: 'Послуга “Під ключ”',
+
+    item_stroke1: 'висота тюлі',
+    item_key1: '300м',
+
+    item_stroke2: 'площа квартири',
+    item_key2: '110м²',
+    
+
+    goals: 'Основним запитом клієнта були реалізовані тюлі без доточки, висота в даній квартирі 3.20~3.50 мт, у нашому салоні є великий вибір тюля саме з даною висотою , що ми і запропонували замовнику та реалізували його основний запит. Щодо кухні - постало питання оформлення вікна римською шторою, щоб створювала затишок та не зменшувала простір кімнати , тому була обрана максимально натуральна фактура льону, що пропускає світло і разом з тим закриває від непотрібних очей✔️ З даною задачею справилися на 100%',
+    designer: 'Яна',
+    budget: '1900$',
+    keys: [
+      {
+        key: 'Послуга',
+        value: '“Під ключ”'
+      },
+      {
+        key: 'Площа об’єкта',
+        value: '110 м²'
+      },
+      {
+        key: 'Час реалізації',
+        value: '30 днів'
+      },
+      {
+        key: 'Тюль',
+        value: '38м'
+      },
+      {
+        key: 'Штори',
+        value: '30м, римська штора'
+      },
+    ],
+    main_image: {
+      url: 'images/case6/main.webp',
+      alt: 'main'
+    },
+    images: [
+      {
+        url: 'images/case6/01.webp',
+        alt: 'case',
+      },
+      {
+        url: 'images/case6/02.webp',
+        alt: 'case',
+      },
+      {
+        url: 'images/case6/03.webp',
+        alt: 'case',
+      },
+      {
+        url: 'images/case6/04.webp',
+        alt: 'case',
+      },
+      {
+        url: 'images/case6/05.webp',
+        alt: 'case',
+      },
+    ]
+  }
+doctype html
+html(lang="uk")
+  include pug/sections/global/head.pug
+  body
+    include pug/sections/global/header.pug
+    include pug/sections/case.pug
+    include pug/sections/global/footer.pug

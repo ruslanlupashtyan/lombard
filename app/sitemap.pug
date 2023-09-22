@@ -1,0 +1,11 @@
+doctype html
+html(lang="en")
+    include pug/sections/global/head.pug
+    body
+        - var pages = ['home', 'services-website', 'services-logo', 'services-seo', 'services-social-media', 'google-advertising', 'services-fb-ig', 'case-study1', 'case-study2', 'product-page', 'blog', 'article', 'product', 'account', 'questionnaries', 'login', 'payment'];
+        .sitemap
+            p.sitemap__count="Page count: "+pages.length
+            .sitemap__items
+                each page in pages
+                    a(class="sitemap__item" href=page+".html")= page
+    script(src="js/main.min.js")

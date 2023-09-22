@@ -1,0 +1,53 @@
+section#hero.hero(style=`--bg-img:url(${item.bg})`)
+  .hero__wrapper
+    .container 
+      .hero__inner.case__hero
+        h3.case__head= item.title
+        .case__text
+          p= item.subtitle
+        .results.d-flex
+          if item.item_key1
+            .sales 
+              p= item.item_key1
+              p.stroke= item.item_stroke1
+          if item.item_key2
+            .return 
+              p= item.item_key2
+              p.stroke= item.item_stroke2
+section.case-info.d-flex.flex-column-reverse.flex-lg-row
+  .case-info__text
+    each line in item.keys
+      .item.d-lg-flex 
+        h5.item__title.short= line.key
+        .item__value
+          p= line.value
+
+    .item 
+      h5.item__title Завдання та реалізація
+      .item__value
+        p= item.goals
+    .item 
+      h5.item__title Дизайнер
+      .item__value
+        p= item.designer
+    .item 
+      h5.item__title Бюджет
+      .item__value
+        p= item.budget
+  .case-info__image 
+    .container
+      img(src=item.main_image.url, alt="item.main_image.alt")
+section.case-results 
+  .case-results__title 
+    .container 
+      p результат
+  .result__slider 
+    .swiper 
+      .swiper-wrapper 
+        each slide, i in item.images 
+          .swiper-slide.case-results__item( class= i===3? "opacied" : "")
+            img(src=slide.url, alt=slide.alt)
+      .swiper-button-prev.swiper-btn
+        include ../../images/svg/arrow.svg
+      .swiper-button-next.swiper-btn
+        include ../../images/svg/arrow.svg

@@ -1,0 +1,68 @@
+- 
+  var feedbacks = [
+    {
+      text_type: true,
+      text: 'Доброго вечора, все повісили. Хотілося б звичайно тюль трохи коротше, не думала що вийде настільки довго. Ну і колір штор на фото і відео здавався світлішим, цей темнуватий. Але в загальному вийшло не погано!',
+      image: '../../images/users/julia-tkachuk.webp',
+      name: 'Юлія Ткачук'
+    },
+    {
+      text_type: false,
+      video: 'videos/mov01.MOV',
+      poster: '../../images/users/poster.webp',
+      image: '../../images/users/olga-tomka.webp',
+      name: 'Ольга Томка'
+    },
+    {
+      text_type: true,
+      text: 'Яна доброго вечора. Нарешті прийшли наші жалюзі. Ми вже їх встановили. Дуже вам дякую за консультації та поради. Ми дуже задоволені і раді, що звернулися саме до вас!',
+      image: '../../images/users/ludmyla.webp',
+      name: 'Людмила'
+    },
+    {
+      text_type: true,
+      text: 'Доброго дня, Яно! Хотіли вам в черговий раз подакувати!Дуже гарні тюлі, ніби другий дім. ДЯКУЮ!',
+      image: '../../images/users/sergiy.webp',
+      name: 'Сергій'
+    },
+    {
+      text_type: true,
+      text: 'Доброго дня. Гарно дякую за красу штор. Вийшло бомбезно!',
+      image: '../../images/users/valentyna.webp',
+      name: 'Валентина'
+    }
+  ];
+
+section.feedback#feedback
+  .feedback__wrapper 
+    .container
+      h2.feedback__title Що наші клієнти кажуть про нас
+      .swiper-buttons.d-flex
+        .prev-button.swiper-btn
+          include ../../images/svg/arrow.svg
+        .next-button.swiper-btn
+          include ../../images/svg/arrow.svg
+    .feedback__slider.swiper
+      ul.swiper-wrapper.feedback__list
+        each feedback in feedbacks
+          if feedback.text_type 
+            li.swiper-slide.feedback__item.item.d-flex.flex-column.justify-content-center
+              .item__text
+                p= feedback.text
+              .item__user.d-flex
+                .image(style=`--bg-img: url(${feedback.image})`)
+                .sign
+                  p= feedback.name
+          else
+            li.swiper-slide.feedback__item.item.d-flex.flex-column.justify-content-center
+              .item__video 
+                video(height='196', style='width: 100%', poster=`${feedback.poster}`).video
+                  source(src=`${feedback.video}`, type='video/mp4', id='theVideo')
+                .play 
+                  .triangle
+              .item__user.d-flex
+                .image(style=`--bg-img: url(${feedback.image})`)
+                .sign
+                  p= feedback.name
+    .container
+      .btn.btn_secondary.btn_large.contact-us Зв'язатись з нами

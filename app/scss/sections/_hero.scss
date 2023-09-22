@@ -1,0 +1,96 @@
+.hero {
+  &__wrapper {
+    padding-top: 104px;
+    position: relative;
+    background-image: var(--bg-img);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include media-breakpoint-down(md) {
+      padding-top: 79px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: radial-gradient(
+        46.66% 99.32% at 50% 50%,
+        rgb(0 0 0 / 14%) 0%,
+        #000000 100%
+      );
+      // background: radial-gradient(46.66% 99.32% at 50% 50%, rgba(0, 0, 0, 0.41) 0%, #000000 100%)
+    }
+  }
+
+  &__inner {
+    padding: 72px 0 104px;
+
+    &.subtitled {
+      padding-bottom: 84px;
+    }
+
+    @include media-breakpoint-down(md) {
+      padding: 29px 0 109px;
+    }
+
+    * {
+      z-index: 1;
+    }
+  }
+
+  &__title {
+    font-size: vw(48);
+    line-height: vw(42);
+
+    @include media-breakpoint-down(sm) {
+      @include font(44, 42, 500);
+    }
+  }
+
+  &__subtitle {
+    // font-family: "BwMitga";
+    color: #fff;
+    text-align: center;
+    @include font(24, 29, 400);
+    position: relative;
+    z-index: 1;
+    margin-top: 28px;
+
+    @include media-breakpoint-down(lg) {
+      @include font(20, 24, 400);
+    }
+  }
+
+  h1,
+  h2 {
+    color: #fff;
+    text-align: center;
+
+    @media screen and (max-width: 350px) {
+      @include font(40, 38, 400);
+    }
+  }
+
+  &.hero-home .hero__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .hero__subtitle p {
+      color: $light-silver-color;
+
+      @include media-breakpoint-down(lg) {
+        font-size: 20px;
+      }
+    }
+
+    a.btn {
+      margin: 61px 0 144px;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+footer.merch-footer
+  .merch-footer__wrapper 
+    .merch-footer__inner.d-lg-flex
+      .merch-footer__form
+        h5.merch-footer__title subscribe to our newsletter
+        form.d-lg-flex.flex-column.align-items-center.justify-content-center
+          input(type="email" placeholder="Email", required  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$")
+          button(type="submit").btn.btn_large.btn_secondary subscribe
+      .merch-footer__link.d-flex.flex-column.flex-lg-row.align-items-center.justify-content-center
+        a(href="#").d-flex.flex-column.flex-lg-row.align-items-center.justify-content-center
+          p go to pinksharkmarketing.com/
+          include ../../images/svg/arrow.svg
+    .merch-footer__about
+      .container.d-lg-flex.justify-content-between
+        .merch-footer__copy 
+          p 2022 Pink Shark Marketing Inc. All rights reserved.
+        .merch-footer__policy.d-flex.justify-content-center
+          a(href="#")  Shipping & Returns
+          a(href="#")  Privacy policy
+script(src="js/main.min.js")

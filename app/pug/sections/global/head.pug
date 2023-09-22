@@ -1,0 +1,21 @@
+- var metatitle = ''
+- var metadescr = ''
+- var metakeys = ''
+
+head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1")
+    meta(name="title" content= metatitle)
+    meta(name="description" content= metadescr)
+    meta(name="keywords" content= metakeys)
+    meta(property="og:image" content='')
+    link(rel="icon" href="" type="image/x-icon")
+    title= title
+    link(rel="stylesheet", href="css/style.min.css")
+    script(async src=`https://www.googletagmanager.com/gtag/js?id=${gTag}`)
+    script.
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '#{gTag}');

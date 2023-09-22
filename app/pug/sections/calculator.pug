@@ -1,0 +1,45 @@
+h2 Кредит під заставу
+.calculator 
+  .calculator__head
+    ul.head.head__buttons
+      li
+        button Золото
+      li
+        button Срібло
+      li
+        button Техніка
+      li
+        button Побутова техніка
+      li
+        button Будівельні інструменти
+      li
+        button Авто
+      li
+        button Інше
+  .calculator__body 
+    .body(data-type="gold")
+      p Золото
+      select(name="")
+        option(value="") 111 
+        option(value="") 222
+        option(value="") 333
+      input(type="number", name="")
+      .total
+
+    .body(data-type="silver")
+      p Срібло
+      select(name="")
+        option(value="") 111
+        option(value="") 222
+        option(value="") 333
+      input(type="number", name="")
+    .body(data-type="tech")
+      p Техніка
+    .body(data-type="housetech")
+      p Побутова техніка
+    .body(data-type="tools")
+      p Буд матеріали
+    .body(data-type="car")
+      p Авто
+    .body(data-type="other")
+      p Інше

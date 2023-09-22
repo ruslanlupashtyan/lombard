@@ -1,0 +1,62 @@
+-
+    var team = [
+        {
+            image: '../../images/team/yana.webp',
+            alt: 'team_member',
+            name: 'Яна',
+            position: 'виконавчий директор та дизайнер'
+        },
+        {
+            image: '../../images/team/tetiana.webp',
+            alt: 'team_member',
+            name: 'Тетяна',
+            position: 'Дизайнер-художник'
+        },
+        {
+            image: '../../images/team/mykola.webp',
+            alt: 'team_member',
+            name: 'Микола',
+            position: 'Майстер'
+        },
+        {
+            image: '../../images/team/vitaliy.webp',
+            alt: 'team_member',
+            name: 'Віталій',
+            position: 'Майстер'
+        },
+        {
+            image: '../../images/team/ruslan.webp',
+            alt: 'team_member',
+            name: 'Руслан',
+            position: 'директор відділу сонцезахисних систем'
+        },
+        {
+            image: '../../images/team/viktoria.webp',
+            alt: 'team_member',
+            name: 'Вікторія',
+            position: 'засновник "ZHAR" дизайнер'
+        }
+    ];
+
+section.our-team#team
+    .our-team__title.section-title-border
+        .container
+            .our-team__title--wrapper.section-title-border__wrapper
+                h2 Наша команда
+    .container
+        .our-team__content
+            h5 Наша команда складається тільки з найкращих спеціалістів, які чудово знають свою справу
+            .our-team__slider
+                .swiper.swiperr
+                    .swiper-wrapper
+                        each member in team
+                            .swiper-slide.our-team__item.slide
+                                img(src=`${member.image}` alt=`${member.alt}`)
+                                h5.slide__title= member.name
+                                p.slide__subtitle= member.position
+                    .swiper-button-prev.swiper-btn
+                        include ../../images/svg/arrow.svg
+                    .swiper-button-next.swiper-btn
+                        include ../../images/svg/arrow.svg
+
+                    .swiper-scrollbar

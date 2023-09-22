@@ -1,0 +1,14 @@
+.btn {
+  &_primary {
+    &:hover {
+    }
+  }
+
+  &_secondary {
+    &:hover {
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+}

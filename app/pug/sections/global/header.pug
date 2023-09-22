@@ -1,0 +1,38 @@
+-
+    var nav = [
+        {
+            title: 'Головна',
+            link: '#'
+        },
+        {
+            title: 'Про нас',
+            link: '#'
+        },
+        {
+            title: 'Оцінка',
+            link: '#'
+        },
+        {
+            title: 'Акції',
+            link: '#'
+        },
+        {
+            title: 'Відділення',
+            link: '#'
+        }
+    ]
+
+header.container
+        nav.header__wrapper
+            a(href='/' class='header__logo')
+                //- img(src='' alt='logo')
+            ul.header__menu.header-desk
+                for link in nav 
+                    li
+                        a(class='header__menu--link' href=link.link)= link.title
+            a(href="tel:+380500500000") 050 050 00 00
+            
+ul.header__menu-mobile.header-mob
+    for link in nav 
+        li
+            a(class='header__menu--link' href=link.link)= link.title

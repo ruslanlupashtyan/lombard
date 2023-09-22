@@ -1,0 +1,41 @@
+h1,
+h2,
+h3 {
+  // font-family: "Cormorant";
+}
+
+h4,
+h5,
+h6 {
+  // font-family: "Pulse";
+}
+
+h1 {
+  @include media-breakpoint-down(md) {
+  }
+}
+
+h2 {
+  @include media-breakpoint-down(lg) {
+  }
+}
+
+h3 {
+  @include media-breakpoint-down(md) {
+  }
+}
+
+h4 {
+  @include media-breakpoint-down(md) {
+  }
+}
+
+h5 {
+  @include media-breakpoint-down(md) {
+  }
+}
+
+h6 {
+  @include media-breakpoint-down(lg) {
+  }
+}
