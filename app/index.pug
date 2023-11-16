@@ -32,5 +32,84 @@ html(lang="uk")
     include pug/sections/global/head.pug
     body
         include pug/sections/global/header.pug
+        section.slider.swiper 
+            .swiper-wrapper
+                .swiper-slide.slider__item.slide(style=`--bg-img: url("../images/001.webp")`)
+                    .slide__image-mob
+                        img(src="images/001.webp", alt="")
+                    p.slide__title Ще більше вигоди
+                    p.slide__descr за промокодом "Ten10"
+                    a.slide__button.flex.ai-center
+                        p Детальніше
+                        .arr-d
+                            include images/arrow.svg
+                        .arr-m
+                            include images/arrow-white.svg
+                .swiper-slide.slider__item.slide(style=`--bg-img: url("../images/002.webp")`)
+                    .slide__image-mob
+                        img(src="images/002.webp", alt="")
+                    p.slide__title Ще більше вигоди
+                    p.slide__descr за промокодом "Ten10"
+                    a.slide__button.flex.ai-center
+                        p Детальніше
+                        .arr-d
+                            include images/arrow.svg
+                        .arr-m
+                            include images/arrow-white.svg
+                .swiper-slide.slider__item.slide(style=`--bg-img: url("../images/003.webp")`)
+                    .slide__image-mob
+                        img(src="images/003.webp", alt="")
+                    p.slide__title Ще більше вигоди
+                    p.slide__descr за промокодом "Ten10"
+                    a.slide__button.flex.ai-center
+                        p Детальніше
+                        .arr-d
+                            include images/arrow.svg
+                        .arr-m
+                            include images/arrow-white.svg
+                .swiper-slide.slider__item.slide(style=`--bg-img: url("../images/004.webp")`)
+                    .slide__image-mob
+                        img(src="images/004.webp", alt="")
+                    p.slide__title Ще більше вигоди
+                    p.slide__descr за промокодом "Ten10"
+                    a.slide__button.flex.ai-center
+                        p Детальніше
+                        .arr-d
+                            include images/arrow.svg
+                        .arr-m
+                            include images/arrow-white.svg
+            .swiper-pagination
+        section.about.container
+            h2.about__title Ломбард “Національний”
+            h4.about__subtitle Це місце, де поняття «ломбард» набуває нового сенсу й поєднує у собі чесні ціни, швидке обслуговування та приємне ставлення до вас
+            h2.about__title Серед особливостей “Національного”
+            .about__items.flex.wrap.jc-between
+                .item.flex.flex-column.ai-center
+                    .item__image.flex.ai-center.jc-center
+                        include images/fast.svg
+                    h4.item__title Швидкість
+                    .item__descr
+                        p достатньо лише 10 хвилин для того, щоб оформити та видати вам кредит
+                .item.flex.flex-column.ai-center 
+                    .item__image.flex.ai-center.jc-center 
+                        include images/sales.svg
+                    h4.item__title Акції та бонуси
+                    .item__descr
+                        p у нас завжди діють акції, а також індивідуальна бонусна система для кожного клієнта
+                .item.flex.flex-column.ai-center 
+                    .item__image.flex.ai-center.jc-center 
+                        include images/safety.svg
+                    h4.item__title Безпека та конфіденційність
+                    .item__descr
+                        p оскільки довіра та надійність є основними принципами компанії, ми не вимагаємо жодних довідок чи подібних документів від наших клієнтів, а також турбуємося, щоб ваші дані залишалися під захистом
+                .item.flex.flex-column.ai-center 
+                    .item__image.flex.ai-center.jc-center 
+                        include images/standarts.svg
+                    h4.item__title Високі стандарти обслуговування
+                    .item__descr
+                        p ми турбуємося про комфорт наших клієнтів, тому слідкуємо за чистотою, створюємо затишний куточок для відпочинку та спілкуємося виключно з повагою та розумінням.
+
         include pug/sections/calculator.pug
+        include pug/sections/reviews.pug
+        include pug/sections/map.pug
         include pug/sections/global/footer.pug

@@ -1,7 +1,17 @@
+body {
+  background-color: $white-color;
+  &.hidden {
+    overflow: hidden;
+  }
+}
 .container {
-  @include media-breakpoint-up(xl) {
-  }
+  max-width: 940px;
+  // @include media-breakpoint-up(xl) {
+  // }
 
-  @include media-breakpoint-down(md) {
-  }
+  // @include media-breakpoint-down(md) {
+  // }
+}
+#map {
+  height: 540px;
 }

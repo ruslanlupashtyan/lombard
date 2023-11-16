@@ -22,17 +22,48 @@
         }
     ]
 
-header.container
-        nav.header__wrapper
-            a(href='/' class='header__logo')
-                //- img(src='' alt='logo')
-            ul.header__menu.header-desk
-                for link in nav 
-                    li
-                        a(class='header__menu--link' href=link.link)= link.title
-            a(href="tel:+380500500000") 050 050 00 00
-            
-ul.header__menu-mobile.header-mob
-    for link in nav 
-        li
-            a(class='header__menu--link' href=link.link)= link.title
+header.header
+    nav.header__wrapper.container.flex.jc-between.ai-center
+        a(href='/' class='header__logo desktop')
+            include ../../../images/logo_d.svg
+        a(href='/' class='header__logo mobile')
+            include ../../../images/logo_m.svg
+        ul.header__menu.header-desk.flex
+            for link in nav 
+                li
+                    a(href=link.link)= link.title
+        a.header__phone(href="tel:+380500500000") 050 050 00 00
+        .header__mobile.mobile.ai-center
+            a.mobile__icon(href="#")
+                include ../../../images/phone_m.svg
+            a.mobile__icon(href="#") 
+                include ../../../images/promotion.svg
+            a.mobile__icon(href="#") 
+                include ../../../images/location.svg
+            a#hamburger.hamburger.flex.flex-column.jc-between
+                span.line
+                span.line
+                span.line
+.header__menu-mobile.header-mob
+    ul.header-mob__list.list
+        for link in nav 
+            li.list__item.item
+                a.item__link(class='header__menu--link' href=link.link)= link.title
+    .header-mob__descr
+        p Працюємо без 
+        p вихідних 
+        p 9:00-19:00
+    .header-mob__phone
+        a(href="tel:+380950827957") 095 082 79 57
+        a(href="tel:+380506540081") 050 654 00 81
+    .header-mob__social 
+        a(href="#")
+            include ../../../images/instagram.svg
+        a(href="#")
+            include ../../../images/facebook.svg
+        a(href="#")
+            include ../../../images/tiktok.svg
+        a(href="#")
+            include ../../../images/viber.svg
+        a(href="#")
+            include ../../../images/telegram.svg

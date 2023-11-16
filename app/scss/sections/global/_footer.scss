@@ -1,2 +1,33 @@
 .footer {
+  padding: 32px 0;
+  &__descr p,
+  &__phone a {
+    @include font(40, 48, 500);
+    display: block;
+    text-align: center;
+    @include max-width(b-md) {
+      @include font(32, 38, 500);
+    }
+  }
+  &__descr,
+  &__phone {
+    margin-bottom: 32px;
+    @include max-width(b-md) {
+      padding: 0 15px;
+      margin-bottom: 40px;
+    }
+  }
+  &__phone a {
+    color: $red-color;
+  }
+  &__social {
+    width: fit-content;
+    margin: 0 auto;
+    a {
+      margin-right: 10px;
+      &:last-child {
+        margin-right: unset;
+      }
+    }
+  }
 }

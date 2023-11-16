@@ -1,0 +1,110 @@
+.slider {
+  margin-bottom: 80px;
+  padding-top: 78px;
+  &__item {
+    height: 680px;
+    background-image: var(--bg-img);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include max-width(b-md) {
+      background-image: unset;
+      height: 460px;
+      background-position: top;
+      background-size: 100%;
+    }
+  }
+  .slide {
+    padding: 240px 0 0 580px;
+    @include max-width(b-xl) {
+      padding: 240px 0 0 300px;
+    }
+    @include max-width(b-lg) {
+      padding: 240px 0 0 100px;
+    }
+    @include max-width(b-md) {
+      padding: 0 0 0 0;
+    }
+    &__image-mob {
+      display: none;
+      @include max-width(b-md) {
+        display: block;
+        height: 180px;
+        overflow: hidden;
+        img {
+          width: 100%;
+        }
+      }
+    }
+    &__title,
+    &__descr {
+      color: $crystal-white-color;
+      @include max-width(b-md) {
+        color: $black-color;
+        text-align: center;
+      }
+    }
+    &__title {
+      @include font(64, 76, 700);
+      margin-bottom: 10px;
+      @include max-width(b-md) {
+        margin-top: 40px;
+        margin-bottom: 5px;
+        @include font(32, 38, 700);
+      }
+    }
+    &__descr {
+      @include font(40, 48, 500);
+      margin-bottom: 16px;
+      @include max-width(b-md) {
+        @include font(20, 24, 500);
+        margin-bottom: 50px;
+      }
+    }
+    &__button {
+      background-color: $crystal-white-color;
+      color: $black-color;
+      @include font(16, 20, 400);
+      padding: 12px;
+      width: fit-content;
+      border-radius: 3px;
+      .arr-d {
+        @include max-width(b-md) {
+          display: none;
+        }
+      }
+      .arr-m {
+        display: none;
+        @include max-width(b-md) {
+          display: block;
+        }
+      }
+      p {
+        margin-right: 10px;
+      }
+      @include max-width(b-md) {
+        background-color: $red-color;
+        margin: 0 auto;
+        p {
+          color: $crystal-white-color;
+        }
+      }
+    }
+  }
+  .swiper-pagination-bullet {
+    width: 48px;
+    height: 3px;
+    border-radius: unset;
+    background-color: $crystal-white-color;
+    @include max-width(b-md) {
+      border-radius: 3px;
+      background-color: $gray-color;
+      opacity: 1;
+    }
+    &-active {
+      @include max-width(b-md) {
+        background-color: $red-color;
+      }
+    }
+  }
+}

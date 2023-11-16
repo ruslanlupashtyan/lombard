@@ -1,23 +1,56 @@
-// @font-face {
-//   font-family: "BwMitga";
-//   src: url("../fonts/BwMitga/BwMitga-Regular.otf") format("OpenType");
-//   font-weight: 400;
-// }
+/* 
+formats:
+.otf = "OpenType"
+.ttf = "TrueType"
+.woff2 = "woff2"
+.woff = "woff"
 
-// @font-face {
-//   font-family: "Pulse";
-//   src: url("../fonts/Pulse/Pulse-regular.otf") format("OpenType");
-//   font-weight: 400;
-// }
+weights:
+100 - Thin
+200 - Extra light (Ultra light)
+300 - Light
+400 - Normal (Regular)
+500 - Medium
+600 - Semi Bold (Demi bold)
+700 - Bold
+800 - Extra bold (Ultra bold)
+900 - Black (Heavy)
 
-// @font-face {
-//   font-family: "Cormorant";
-//   src: url("../fonts/Cormorant/CormorantGaramond-Medium.ttf") format("TrueType");
-//   font-weight: 500;
-// }
+example:
+  @font-face {
+    font-family: "FontName";
+    src: url("..dir/fontname.otf") format("OpenType");
+    font-weight: 400;
+  }
+*/
 
 @font-face {
-  font-family: "Montserrat";
-  src: url("../fonts/Montserrat-Regular.ttf") format("TrueType");
+  font-family: "AgoraSans";
+  src: url("../fonts/PFAgoraSansProThin.ttf") format("TrueType");
+  font-weight: 100;
+}
+@font-face {
+  font-family: "AgoraSans";
+  src: url("../fonts/PFAgoraSansProLight.ttf") format("TrueType");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "AgoraSans";
+  src: url("../fonts/PFAgoraSansProRegular.ttf") format("TrueType");
   font-weight: 400;
+}
+@font-face {
+  font-family: "AgoraSans";
+  src: url("../fonts/PFAgoraSansProMedium.ttf") format("TrueType");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "AgoraSans";
+  src: url("../fonts/PFAgoraSansProBold.ttf") format("TrueType");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "AgoraSans";
+  src: url("../fonts/PFAgoraSansProBlack.ttf") format("TrueType");
+  font-weight: 900;
 }

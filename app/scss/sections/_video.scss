@@ -1,0 +1,37 @@
+.video {
+  padding-top: 78px;
+  margin-bottom: 64px;
+  position: relative;
+  &__file {
+    height: 320px;
+    width: 100%;
+    @include max-width(b-md) {
+      height: 180px;
+    }
+  }
+  &__play {
+    position: absolute;
+    bottom: -27px;
+    left: calc(50% - 32px);
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: $red-color;
+    border: 1px solid $crystal-white-color;
+  }
+}
+.about-us {
+  margin-bottom: 80px;
+  &__title {
+    margin-bottom: 16px;
+  }
+  &__text {
+    p {
+      text-align: center;
+      margin-bottom: 20px;
+      @include max-width(b-md) {
+        text-align: justify;
+      }
+    }
+  }
+}

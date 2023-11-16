@@ -1,4 +1,5 @@
-@import "node_modules/bootstrap/scss/bootstrap.scss";
+// @import "node_modules/bootstrap/scss/bootstrap.scss";
+@import "components/framework.scss";
 @import "func.scss";
 @import "variables.scss";
 @import "font.scss";
@@ -8,11 +9,20 @@
 
 //! components
 @import "components/buttons.scss";
-// @import "components/swiper.scss";
-// @import "components/select.scss";
+@import "components/swiper.scss";
+@import "components/select.scss";
+@import "sections/promotions.scss";
+@import "sections/promotion.scss";
+@import "sections/services.scss";
+@import "sections/video.scss";
+@import "sections/global/header.scss";
+@import "sections/global/footer.scss";
 
 //! sections
 @import "sections/calculator.scss";
+@import "sections/slider.scss";
+@import "sections/about.scss";
+@import "sections/map.scss";
 
 //! pages
 // @import "pages/sitemap.scss";

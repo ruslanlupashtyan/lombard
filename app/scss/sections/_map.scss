@@ -1,0 +1,20 @@
+.map {
+  &__title {
+    margin-bottom: 32px;
+  }
+  .ss-main {
+    width: fit-content;
+    min-width: 430px;
+    border-radius: unset;
+    border: 1px solid $red-color;
+  }
+  .direction {
+    &__btn {
+      background-color: $red-color;
+      padding: 20px;
+    }
+  }
+  #map {
+    border: 1px solid $red-color;
+  }
+}

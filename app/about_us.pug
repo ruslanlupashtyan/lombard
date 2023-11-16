@@ -1,0 +1,114 @@
+- var title = 'TITLE'
+- var gTag = 'G-'
+-
+    var nav = [
+        {
+            title: '',
+            link: '#'
+        },
+        {
+            title: '',
+            link: '#'
+        },
+        {
+            title: '',
+            link: '#'
+        },
+        {
+            title: '',
+            link: '#'
+        },
+        {
+            title: '',
+            link: '#'
+        },
+        {
+            title: '',
+            link: '#'
+        }
+    ]
+doctype html    
+html(lang="uk")
+    include pug/sections/global/head.pug
+    body
+        include pug/sections/global/header.pug
+        section.video
+          video(height='320', style='width: 100%').video__file
+            source(src='videos/IMG_0034.MOV', type='video/mp4', id='theVideo')
+          .video__play.flex.ai-center.jc-center
+            include images/triangle.svg 
+        section.about-us.container 
+          h2.about-us__title Ломбард “Національний”
+          .about-us__text
+            p Ломбард “Національний” революціонізує традиційний досвід роботи ломбарду, створюючи абсолютно новий вимір.
+            p Наша місія проста, але важлива: надавати оперативне та високоякісне обслуговування, прозоре ціноутворення цін та по-справжньому дружній підхід.
+            p У центрі нашої діяльності лежить бажання надавати кредити під заставу майна, повністю пристосовані до ваших потреб та з повагою до вашого часу.
+            p Вам достатньо лише завітати до нас на 10 хвилин, насолодитись чистотою, затишком та спілкуванням, отримати послуги високої якості та відчути, що ви завжди можете повернутися до нас, не хвилюючись про безпеку, надійність та ціноутворення.
+        section.about.container
+          h2.about__title Серед особливостей “Національного”
+          .about__items.flex.wrap.jc-between
+            .item.flex.flex-column.ai-center
+              .item__image.flex.ai-center.jc-center
+                include images/fast.svg
+              h4.item__title Швидкість
+              .item__descr
+                p достатньо лише 10 хвилин для того, щоб оформити та видати вам кредит
+            .item.flex.flex-column.ai-center 
+              .item__image.flex.ai-center.jc-center 
+                include images/sales.svg
+              h4.item__title Акції та бонуси
+              .item__descr
+                p у нас завжди діють акції, а також індивідуальна бонусна система для кожного клієнта
+            .item.flex.flex-column.ai-center 
+              .item__image.flex.ai-center.jc-center 
+                include images/safety.svg
+              h4.item__title Безпека та конфіденційність
+              .item__descr
+                p оскільки довіра та надійність є основними принципами компанії, ми не вимагаємо жодних довідок чи подібних документів від наших клієнтів, а також турбуємося, щоб ваші дані залишалися під захистом
+            .item.flex.flex-column.ai-center 
+              .item__image.flex.ai-center.jc-center 
+                include images/standarts.svg
+              h4.item__title Високі стандарти обслуговування
+              .item__descr
+                p ми турбуємося про комфорт наших клієнтів, тому слідкуємо за чистотою, створюємо затишний куточок для відпочинку та спілкуємося виключно з повагою та розумінням.
+        section.services.container 
+          h2.services__title З чим ми працюємо
+          .services__items
+            .wrapper
+              .inner.items.flex.wrap
+                .item 
+                  .item__circle.flex.ai-center.jc-center
+                    include images/gold.svg
+                  .item__title
+                    p Золото
+                .item 
+                  .item__circle.flex.ai-center.jc-center
+                    include images/silver.svg
+                  .item__title
+                    p Срібло
+                .item 
+                  .item__circle.flex.ai-center.jc-center
+                    include images/cell.svg
+                  .item__title
+                    p Гаджети
+                .item 
+                  .item__circle.flex.ai-center.jc-center
+                    include images/housetech.svg
+                  .item__title
+                    p Побутова техніка
+                .item 
+                  .item__circle.flex.ai-center.jc-center
+                    include images/tools.svg
+                  .item__title
+                    p Будівельні інструменти
+                .item 
+                  .item__circle.flex.ai-center.jc-center
+                    include images/car.svg
+                  .item__title
+                    p Автомобілі
+
+
+
+        include pug/sections/calculator.pug
+        include pug/sections/map.pug
+        include pug/sections/global/footer.pug

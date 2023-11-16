@@ -1,0 +1,68 @@
+.services {
+  padding-bottom: 30px;
+  &__title {
+    margin-bottom: 20px;
+  }
+  .items {
+    justify-content: space-evenly;
+
+    @include max-width(b-md) {
+      justify-content: space-evenly;
+    }
+    @media screen and (max-width: 390px) {
+      justify-content: space-between;
+    }
+    @media screen and (max-width: 360px) {
+      justify-content: center;
+    }
+  }
+  .item {
+    max-width: 250px;
+    padding: 45px 75px;
+    border-radius: 3px;
+    background-color: $red-color;
+    background-image: url(../../images/ornament.svg);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: 20%;
+    margin-bottom: 32px;
+    &__circle {
+      background-color: $crystal-white-color;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-bottom: 32px;
+    }
+    &__title {
+      text-align: center;
+      p {
+        @include font(20, 24, 500);
+        color: $crystal-white-color;
+      }
+    }
+    @include max-width(b-md) {
+      background-image: unset;
+      max-width: 164px;
+      margin-bottom: 20px;
+      padding: 25px 50px 45px;
+      &__circle {
+        width: 64px;
+        height: 64px;
+      }
+      &__title {
+        p {
+          @include font(16, 20, 500);
+        }
+      }
+      &:nth-child(odd) {
+        margin-right: 20px;
+      }
+    }
+
+    @include max-width(b-lg) {
+      &:nth-child(odd) {
+        margin-right: unset;
+      }
+    }
+  }
+}

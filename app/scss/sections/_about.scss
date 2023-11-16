@@ -1,0 +1,41 @@
+.about {
+  margin-bottom: 40px;
+  &__title {
+    margin-bottom: 20px;
+  }
+  &__subtitle {
+    margin-bottom: 40px;
+    @include max-width(b-md) {
+      @include font(16, 20, 300);
+    }
+  }
+  &__items {
+    margin-top: 40px;
+  }
+  .item {
+    width: calc(50% - 20px);
+    margin-bottom: 40px;
+    &__image {
+      margin-bottom: 10px;
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background-color: $red-color;
+    }
+    &__title {
+      margin-bottom: 5px;
+    }
+    &__descr {
+      p {
+        text-align: center;
+      }
+    }
+    @include max-width(b-md) {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+  @include max-width(b-md) {
+    margin-bottom: 60px;
+  }
+}

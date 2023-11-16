@@ -1,0 +1,10 @@
+.map 
+  h2.map__title Наші відділення поруч
+  .map__direction.direction.flex.jc-center
+    select.direction__select#direction_select(name="adress")
+      option(data-placeholder="true" value="select") Оберіть відділення
+      option(value="Holovna") Головна
+      option(value="Entusiastiv") Ентузіастів
+    button.direction__btn.create-direction
+      include ../../images/triangle.svg
+  #map

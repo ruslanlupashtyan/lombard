@@ -1,2 +1,167 @@
 .header {
+  position: fixed;
+  z-index: 3;
+  background-color: $white-color;
+  width: 100%;
+
+  &__wrapper {
+    padding: 15px 0;
+    @include max-width(b-md) {
+      padding: 15px;
+    }
+  }
+  &__logo {
+    @include max-width(b-lg) {
+      max-width: 150px;
+      svg {
+        width: 100%;
+      }
+    }
+    position: relative;
+    z-index: 3;
+    &.mobile {
+      display: none;
+    }
+    @include max-width(b-md) {
+      &.desktop {
+        display: none;
+      }
+      &.mobile {
+        display: block;
+      }
+    }
+  }
+  &__menu {
+    @include max-width(b-md) {
+      display: none;
+    }
+    a {
+      margin-right: 40px;
+      @include font(16, 20, 400);
+      &.active {
+        color: $red-color;
+      }
+    }
+  }
+  &__phone {
+    @include max-width(b-lg) {
+      @include font(18, 24, 500);
+    }
+    @include max-width(b-md) {
+      display: none;
+    }
+    position: relative;
+    @include font(24, 30, 500);
+    &::before {
+      content: url(../../../images/phone.svg);
+      position: absolute;
+      top: 0;
+      left: -45px;
+      width: 25px;
+      height: 25px;
+      @include max-width(b-lg) {
+        width: 20px;
+        height: 20px;
+        left: -30px;
+      }
+    }
+  }
+  &__mobile {
+    .hamburger {
+      position: relative;
+      z-index: 3;
+      width: 24px;
+      height: 14px;
+      .line {
+        display: block;
+        width: 100%;
+        height: 1px;
+        border-top: 1px solid $black-color;
+        margin-bottom: 7px;
+        &:first-child {
+          &.active {
+            transform: rotate3d(0, 0, 1, 45deg) translateY(11px);
+            transition: ease-in-out 250ms;
+          }
+        }
+        &:nth-child(2) {
+          &.active {
+            visibility: hidden;
+          }
+        }
+        &:last-child {
+          &.active {
+            transform: rotate3d(0, 0, 1, -45deg) translateY(-11px);
+            transition: ease-in-out 250ms;
+          }
+          margin-bottom: unset;
+        }
+      }
+    }
+  }
+  .mobile {
+    display: none;
+    @include max-width(b-md) {
+      display: flex;
+    }
+    &__icon {
+      margin-right: 20px;
+    }
+  }
+}
+
+.header-mob {
+  display: none;
+  height: 100vh;
+  position: fixed;
+  z-index: 2;
+  padding-top: 84px;
+  top: 0;
+  width: 100%;
+  background-color: $white-color;
+  transform: translateY(-100%);
+  transition: ease-in-out 250ms;
+  &.show {
+    transform: translateY(0%);
+    transition: ease-in-out 250ms;
+  }
+  @include max-width(b-md) {
+    display: block;
+  }
+  &__descr p,
+  &__phone {
+    @include font(32, 38, 700);
+    a {
+      display: block;
+      text-align: center;
+      color: $red-color;
+    }
+  }
+  &__descr {
+    text-align: center;
+    padding-top: 32px;
+  }
+  &__phone {
+    padding-top: 40px;
+  }
+  &__social {
+    padding: 40px 15px 52px;
+    display: flex;
+    justify-content: space-between;
+    a {
+      display: block;
+    }
+  }
+  .item {
+    border-top: 0.5px solid $black-color;
+    &:last-child {
+      border-bottom: 0.5px solid $black-color;
+    }
+    &__link {
+      display: block;
+      padding: 16px 0;
+      @include font(20, 24, 500);
+      text-align: center;
+    }
+  }
 }

@@ -1,45 +1,586 @@
-h2 Кредит під заставу
-.calculator 
-  .calculator__head
-    ul.head.head__buttons
-      li
-        button Золото
-      li
-        button Срібло
-      li
-        button Техніка
-      li
-        button Побутова техніка
-      li
-        button Будівельні інструменти
-      li
-        button Авто
-      li
-        button Інше
-  .calculator__body 
-    .body(data-type="gold")
-      p Золото
-      select(name="")
-        option(value="") 111 
-        option(value="") 222
-        option(value="") 333
-      input(type="number", name="")
-      .total
+.calculator
+  .container
+    h2 Кредит під заставу
+    .desktop
+      .tabs 
+        a.active(data-selector="gold") Золото
+        a(data-selector="silver") Срібло
+        a(data-selector="tech") Техніка
+        a(data-selector="hometech") Побутова техніка
+        a(data-selector="tools") Будівельні інструменти
+        a(data-selector="auto") Авто
+        a(data-selector="other") Інше
+      .items-wrapper
+        .items 
+          .item.active(data-type="gold")
+            .flex.jc-between
+              .field
+                p Проба
+                select#gold_probe(data-placeholder="true", value="0")
+                  option(value=1) 1
+                  option(value=2) 2
+                  option(value=3) 3
+              .field
+                p Вага, г
+                input(type="number", name="")
+            .total
+              .total__descr 
+                p Приблизна оцінка вартості виробу:
+              .total__count 
+                p 2300
+            a.calculate 
+              p Розрахувати вартість онлайн
+              include ../../images/arrow.svg
+          .item(data-type="silver")
+            .flex.jc-between
+              .field
+                p Проба
+                select#silver_probe(data-placeholder="true", value="0")
+                  option(value=1) 1
+                  option(value=2) 2
+                  option(value=3) 3
+              .field
+                p Вага, г
+                input(type="number", name="")
+            .total
+              .total__descr 
+                p Приблизна оцінка вартості виробу:
+              .total__count 
+                p 2300
+            a.calculate 
+              p Розрахувати вартість онлайн
+              include ../../images/arrow.svg
 
-    .body(data-type="silver")
-      p Срібло
-      select(name="")
-        option(value="") 111
-        option(value="") 222
-        option(value="") 333
-      input(type="number", name="")
-    .body(data-type="tech")
-      p Техніка
-    .body(data-type="housetech")
-      p Побутова техніка
-    .body(data-type="tools")
-      p Буд матеріали
-    .body(data-type="car")
-      p Авто
-    .body(data-type="other")
-      p Інше
+
+          .item(data-type="tech")
+            .flex.jc-between
+              .field
+                p Тип техніки
+                select#tech_type(data-placeholder="true", value="0")
+                  option Телефон
+                  option Планшет
+                  option Ноутбук
+                  option Комп'ютер
+                  option Офісна техніка
+                  option Навушники
+                  option Портативна електроніка
+                  option Аудіо техніка
+                  option Фото та відео
+              .field
+                p Виробник, модель
+                input(type="text", name="")
+            .stars
+              p Стан
+              .stars__container
+                .star
+                  include ../../images/star.svg
+                  p 1
+                .star
+                  include ../../images/star.svg
+                  p 2
+                .star
+                  include ../../images/star.svg
+                  p 3
+                .star
+                  include ../../images/star.svg
+                  p 4
+                .star
+                  include ../../images/star.svg
+                  p 5
+            .flex.jc-between
+              .field 
+                p Ім'я
+                input(type="text", name="")
+              .field 
+                p Номер телефону
+                input(type="tel", name="")
+            a.calculate 
+              p Розрахувати вартість онлайн
+              include ../../images/arrow.svg
+          .item(data-type="hometech")
+            .flex.jc-between
+              .field
+                p Тип техніки
+                select#hometech_type(data-placeholder="true", value="0")
+                  option Телевізор
+                  option Холодильник
+                  option Морозильна камера
+                  option Пральна машина
+                  option Посудомийна машина
+                  option Мікрохвильова піч
+                  option Сушильний автомат
+                  option Плита
+                  option Вбудована духова шафа
+                  option Кавоварка
+                  option Блендер
+                  option Грилі та електрошашличниці
+                  option Мультиварка
+                  option Мультипіч
+                  option Електрочайник
+                  option Кухонний комбайн
+                  option Еелктрична піч
+                  option Настільна плита
+                  option Тостер
+                  option Хлібопіч
+                  option Робот-пилосос
+                  option Пилосос для сухого прибирання
+                  option Пароочисник
+                  option Праска
+                  option Швейна техніка та аксесуари
+                  option Соковичавниця
+                  option Інше
+              .field
+                p Виробник, модель
+                input(type="text", name="")
+            .stars
+              p Стан
+              .stars__container
+                .star
+                  include ../../images/star.svg
+                  p 1
+                .star
+                  include ../../images/star.svg
+                  p 2
+                .star
+                  include ../../images/star.svg
+                  p 3
+                .star
+                  include ../../images/star.svg
+                  p 4
+                .star
+                  include ../../images/star.svg
+                  p 5
+            .flex.jc-between
+              .field 
+                p Ім'я
+                input(type="text", name="")
+              .field 
+                p Номер телефону
+                input(type="tel", name="")
+            a.calculate 
+              p Розрахувати вартість онлайн
+              include ../../images/arrow.svg
+          .item(data-type="tools")
+            .flex.jc-between
+              .field
+                p Тип техніки
+                select#tools_type(data-placeholder="true", value="0")
+                  option Шурупокрут
+                  option Еелктровикрутка
+                  option Болгарка
+                  option Перфоратор
+                  option Дрилі та міксери
+                  option Пила та плиткорізи
+                  option Електролобзик
+                  option Вимірювальна техніка
+                  option Фрезер
+                  option Багатофункційні інструменти
+                  option Будівельний фен
+                  option Інше
+              .field
+                p Виробник, модель
+                input(type="text", name="")
+            .stars
+              p Стан
+              .stars__container
+                .star
+                  include ../../images/star.svg
+                  p 1
+                .star
+                  include ../../images/star.svg
+                  p 2
+                .star
+                  include ../../images/star.svg
+                  p 3
+                .star
+                  include ../../images/star.svg
+                  p 4
+                .star
+                  include ../../images/star.svg
+                  p 5
+            .flex.jc-between
+              .field 
+                p Ім'я
+                input(type="text", name="")
+              .field 
+                p Номер телефону
+                input(type="tel", name="")
+            a.calculate 
+              p Розрахувати вартість онлайн
+              include ../../images/arrow.svg
+          
+          .item(data-type="auto")
+            .flex.jc-between
+              .field
+                p Виробник
+                input(type="number", name="")
+              .field
+                p Модель
+                input(type="number", name="")
+            .flex.jc-between
+              .field
+                p Рік випуску
+                select#auto_type(data-placeholder="true", value="0")
+                  option 1980
+                  option 1981
+                  option 1982
+                  option 1983
+                  option 1984
+                  option 1985
+                  option 1986
+                  option 1987
+                  option 1988
+                  option 1989
+                  option 1990
+                  option 1991
+                  option 1992
+                  option 1993
+                  option 1994
+                  option 1995
+                  option 1996
+                  option 1997
+                  option 1998
+                  option 1999
+                  option 2000
+                  option 2001
+                  option 2002
+                  option 2003
+                  option 2004
+                  option 2005
+                  option 2006
+                  option 2007
+                  option 2008
+                  option 2009
+                  option 2010
+                  option 2011
+                  option 2012
+                  option 2013
+                  option 2014
+                  option 2015
+                  option 2016
+                  option 2017
+                  option 2018
+                  option 2019
+                  option 2020
+                  option 2021
+                  option 2022
+                  option 2023
+              .field
+                p Пробіг авто
+                input(type="number", name="")
+            .flex.jc-between
+              .field 
+                p Ім'я
+                input(type="text", name="")
+              .field 
+                p Номер телефону
+                input(type="tel", name="")
+            a.calculate 
+              p Розрахувати вартість онлайн
+              include ../../images/arrow.svg
+          .item(data-type="other")
+            .field.large
+              p Назва моделі
+              input(type="number", name="")
+            
+            .flex.jc-between
+              .field 
+                p Ім'я
+                input(type="text", name="")
+              .field 
+                p Номер телефону
+                input(type="tel", name="")
+            a.calculate 
+              p Розрахувати вартість онлайн
+              include ../../images/arrow.svg
+    
+    .mobile
+      .item.active
+        a.item__head Золото
+        .item__body
+          .flex-md
+            .field
+              p Проба
+              select#gold_probe_m(data-placeholder="true", value="0")
+                option(value=1) 1
+                option(value=2) 2
+                option(value=3) 3
+            .field
+              p Вага, г
+              input(type="number", name="")
+          .total
+            .total__descr 
+              p Приблизна оцінка вартості виробу:
+            .total__count 
+              p 2300
+          a.calculate.flex.ai-center.jc-center
+            p Розрахувати вартість онлайн
+            include ../../images/arrow-white.svg
+      .item
+        a.item__head Срібло
+        .item__body
+          .flex-md
+            .field
+              p Проба
+              select#silver_probe_m(data-placeholder="true", value="0")
+                option(value=1) 1
+                option(value=2) 2
+                option(value=3) 3
+            .field
+              p Вага, г
+              input(type="number", name="")
+          .total
+            .total__descr 
+              p Приблизна оцінка вартості виробу:
+            .total__count 
+              p 2300
+          a.calculate.flex.ai-center.jc-center
+            p Розрахувати вартість онлайн
+            include ../../images/arrow-white.svg
+
+
+      .item
+        a.item__head Техніка
+        .item__body
+          .field
+            p Тип техніки
+            select#tech_type_m(data-placeholder="true", value="0")
+              option Телефон
+              option Планшет
+              option Ноутбук
+              option Комп'ютер
+              option Офісна техніка
+              option Навушники
+              option Портативна електроніка
+              option Аудіо техніка
+              option Фото та відео
+          .field
+            p Виробник, модель
+            input(type="number", name="")
+          .stars
+            p.stars__title Стан
+            .stars__container
+              .star
+                include ../../images/star_m.svg
+                p 1
+              .star
+                include ../../images/star_m.svg
+                p 2
+              .star
+                include ../../images/star_m.svg
+                p 3
+              .star
+                include ../../images/star_m.svg
+                p 4
+              .star
+                include ../../images/star_m.svg
+                p 5
+
+            .field 
+              p Ім'я
+              input(type="text", name="")
+            .field 
+              p Номер телефону
+              input(type="tel", name="")
+            a.calculate.flex.ai-center.jc-center
+              p Розрахувати вартість онлайн
+              include ../../images/arrow-white.svg
+      .item
+        a.item__head Побутова техніка
+        .item__body
+          .field
+            p Тип техніки
+            select#hometech_type_m(data-placeholder="true", value="0")
+              option Телевізор
+              option Холодильник
+              option Морозильна камера
+              option Пральна машина
+              option Посудомийна машина
+              option Мікрохвильова піч
+              option Сушильний автомат
+              option Плита
+              option Вбудована духова шафа
+              option Кавоварка
+              option Блендер
+              option Грилі та електрошашличниці
+              option Мультиварка
+              option Мультипіч
+              option Електрочайник
+              option Кухонний комбайн
+              option Еелктрична піч
+              option Настільна плита
+              option Тостер
+              option Хлібопіч
+              option Робот-пилосос
+              option Пилосос для сухого прибирання
+              option Пароочисник
+              option Праска
+              option Швейна техніка та аксесуари
+              option Соковичавниця
+              option Інше
+          .field
+            p Виробник, модель
+            input(type="text", name="")
+          .stars
+            p.stars__title Стан
+            .stars__container
+              .star
+                include ../../images/star_m.svg
+                p 1
+              .star
+                include ../../images/star_m.svg
+                p 2
+              .star
+                include ../../images/star_m.svg
+                p 3
+              .star
+                include ../../images/star_m.svg
+                p 4
+              .star
+                include ../../images/star_m.svg
+                p 5
+
+            .field 
+              p Ім'я
+              input(type="text", name="")
+            .field 
+              p Номер телефону
+              input(type="tel", name="")
+            a.calculate.flex.ai-center.jc-center
+              p Розрахувати вартість онлайн
+              include ../../images/arrow-white.svg
+      .item
+        a.item__head Будівельні інструменти
+        .item__body
+          .field
+            p Тип техніки
+            select#tools_type_m(data-placeholder="true", value="0")
+              option Шурупокрут
+              option Еелктровикрутка
+              option Болгарка
+              option Перфоратор
+              option Дрилі та міксери
+              option Пила та плиткорізи
+              option Електролобзик
+              option Вимірювальна техніка
+              option Фрезер
+              option Багатофункційні інструменти
+              option Будівельний фен
+              option Інше
+          .field
+            p Виробник, модель
+            input(type="text", name="")
+          .stars
+            p.stars__title Стан
+            .stars__container
+              .star
+                include ../../images/star_m.svg
+                p 1
+              .star
+                include ../../images/star_m.svg
+                p 2
+              .star
+                include ../../images/star_m.svg
+                p 3
+              .star
+                include ../../images/star_m.svg
+                p 4
+              .star
+                include ../../images/star_m.svg
+                p 5
+
+            .field 
+              p Ім'я
+              input(type="text", name="")
+            .field 
+              p Номер телефону
+              input(type="tel", name="")
+            a.calculate.flex.ai-center.jc-center
+              p Розрахувати вартість онлайн
+              include ../../images/arrow-white.svg
+
+
+      .item
+        a.item__head Авто
+        .item__body
+          .field
+            p Виробник
+            input(type="text", name="")
+          .field
+            p Модель
+            input(type="text", name="")
+          .field
+            p Рік випуску
+            select#auto_type_m(data-placeholder="true", value="0")
+              option 1980
+              option 1981
+              option 1982
+              option 1983
+              option 1984
+              option 1985
+              option 1986
+              option 1987
+              option 1988
+              option 1989
+              option 1990
+              option 1991
+              option 1992
+              option 1993
+              option 1994
+              option 1995
+              option 1996
+              option 1997
+              option 1998
+              option 1999
+              option 2000
+              option 2001
+              option 2002
+              option 2003
+              option 2004
+              option 2005
+              option 2006
+              option 2007
+              option 2008
+              option 2009
+              option 2010
+              option 2011
+              option 2012
+              option 2013
+              option 2014
+              option 2015
+              option 2016
+              option 2017
+              option 2018
+              option 2019
+              option 2020
+              option 2021
+              option 2022
+              option 2023
+          .field
+            p Пробіг авто
+            input(type="number", name="")
+          .field 
+            p Ім'я
+            input(type="text", name="")
+          .field 
+            p Номер телефону
+            input(type="tel", name="")
+          a.calculate.flex.ai-center.jc-center
+            p Розрахувати вартість онлайн
+            include ../../images/arrow-white.svg
+
+      .item
+        a.item__head Інше
+        .item__body
+          .field
+            p Назва моделі
+            input(type="number", name="")
+          .field 
+            p Ім'я
+            input(type="text", name="")
+          .field 
+            p Номер телефону
+            input(type="tel", name="")
+          a.calculate.flex.ai-center.jc-center
+            p Розрахувати вартість онлайн
+            include ../../images/arrow-white.svg

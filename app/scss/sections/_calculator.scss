@@ -1,0 +1,210 @@
+.calculator {
+  h2 {
+    margin-bottom: 15px;
+    @include min-width(b-md) {
+      margin-bottom: 20px;
+    }
+  }
+  // .flex {
+  //   display: flex;
+  //   justify-content: space-between;
+  // }
+  .desktop {
+    background-color: $red-color;
+    @include max-width(b-md) {
+      display: none;
+    }
+    .tabs {
+      display: flex;
+      a {
+        border: 1px solid $crystal-white-color;
+        padding: 10px 25px;
+        width: 100%;
+        cursor: pointer;
+        height: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: $crystal-white-color;
+        &.active {
+          color: $black-color;
+          background-color: $crystal-white-color;
+        }
+      }
+    }
+    .items-wrapper {
+      background-image: url(../../images/right.svg);
+      background-position: right;
+      background-repeat: no-repeat;
+    }
+    .items {
+      color: $crystal-white-color;
+      background-image: url(../../images/left.svg);
+      background-position: left;
+      background-repeat: no-repeat;
+    }
+    .item {
+      margin: 0 auto;
+      padding: 80px 0 135px;
+      max-width: 510px;
+      width: 100%;
+      display: none;
+      &.active {
+        display: block;
+      }
+    }
+    .field {
+      width: calc(50% - 5px);
+      &.large {
+        width: 100%;
+      }
+      p {
+        @include font(12, 14, 400);
+        margin-bottom: 7px;
+        color: $crystal-white-color;
+      }
+      input {
+        width: 100%;
+        @include font(16, 20, 400);
+      }
+      .ss-single {
+        @include font(16, 20, 400);
+      }
+      .ss-main,
+      input {
+        padding: 20px;
+        border-radius: 3px;
+        border: none;
+      }
+      margin-bottom: 24px;
+    }
+    .total {
+      padding: 35px 0 16px;
+      margin-bottom: 24px;
+      text-align: center;
+      background-color: $crystal-white-color;
+      color: $black-color;
+      &__descr {
+        p {
+          @include font(16, 20, 400);
+          margin-bottom: 10px;
+        }
+      }
+      &__count {
+        p {
+          @include font(40, 48, 500);
+          color: $red-color;
+        }
+      }
+    }
+    .calculate {
+      display: flex;
+      align-items: center;
+      width: fit-content;
+      color: $black-color;
+      margin: 0 auto;
+      padding: 10px;
+      border-radius: 3px;
+      background-color: $crystal-white-color;
+      p {
+        margin-right: 10px;
+      }
+    }
+  }
+  .stars {
+    &__container {
+      display: flex;
+      margin-bottom: 10px;
+      @include max-width(b-md) {
+        justify-content: space-evenly;
+      }
+    }
+    .stars__title {
+      margin-bottom: 7px;
+    }
+    .star {
+      margin-right: 25px;
+      p {
+        text-align: center;
+      }
+      @include max-width(b-md) {
+        margin-right: unset;
+      }
+    }
+  }
+  .mobile {
+    display: none;
+    .item {
+      height: 60px;
+      overflow: hidden;
+      &.active {
+        height: 100%;
+        overflow: unset;
+      }
+      background-color: $crystal-white-color;
+      &__head {
+        @include font(16, 18, 400);
+        display: block;
+        text-align: center;
+        background-color: $red-color;
+        color: $crystal-white-color;
+        border: 1px solid $crystal-white-color;
+        border-radius: 3px;
+        padding: 20px 0;
+      }
+      &__body {
+        padding: 20px 15px;
+      }
+    }
+    .field {
+      color: $red-color;
+      input,
+      .ss-main {
+        margin-bottom: 17px;
+        @include font(16, 20, 300);
+        width: 100%;
+        padding: 20px;
+        background-color: $white-color;
+        border: none;
+      }
+      p {
+        padding-bottom: 7px;
+      }
+      // .ss-main {
+      //   background-color: $white-color;
+      //   padding: 20px;
+      // }
+    }
+    .total {
+      padding: 30px 0;
+      margin-bottom: 20px;
+      text-align: center;
+      border-radius: 3px;
+      border: 2px solid $red-color;
+      &__descr {
+        p {
+          margin-bottom: 10px;
+          @include font(16, 20, 300);
+        }
+      }
+      &__count {
+        color: $red-color;
+        @include font(24, 28, 500);
+      }
+    }
+    .calculate {
+      padding: 12px;
+      background-color: $red-color;
+      p {
+        color: $crystal-white-color;
+        margin-right: 10px;
+      }
+    }
+  }
+  @include max-width(b-md) {
+    .mobile {
+      display: block;
+    }
+  }
+}

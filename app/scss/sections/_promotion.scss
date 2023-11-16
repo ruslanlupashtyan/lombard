@@ -1,0 +1,43 @@
+.promotion {
+  margin-bottom: 80px;
+  &__image {
+    height: 320px;
+    overflow: hidden;
+    margin-bottom: 32px;
+    img {
+      width: 100%;
+    }
+    @include max-width(b-md) {
+      height: 150px;
+    }
+  }
+  &__title,
+  &__subtitle {
+    margin-bottom: 16px;
+  }
+  &__title {
+    text-align: left;
+    @include max-width(b-md) {
+      @include font(20, 24, 500);
+    }
+  }
+  &__exp {
+    margin-bottom: 30px;
+  }
+  &__text {
+    padding: 32px 0;
+    border-top: 1px solid $black-color;
+    @include max-width(b-md) {
+      border-bottom: 1px solid $black-color;
+      padding: 16px 0;
+    }
+  }
+  @include max-width(b-md) {
+    &__subtitle {
+      margin-bottom: 8px;
+    }
+    &__exp {
+      margin-bottom: 16px;
+    }
+  }
+}
