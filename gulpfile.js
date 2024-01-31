@@ -15,6 +15,8 @@ function browsersync() {
     server: {
       baseDir: "app/",
     },
+    port: 3310,
+    ui:{ port:3311 }
   });
 }
 
@@ -62,6 +64,7 @@ function scripts() {
     "node_modules/bootstrap/dist/js/bootstrap.js", // uncomment only use bootstrap
     "app/js/*.js",
     "!app/js/main.min.js",
+    "!app/js/admin.js",
     "!app/js/axios.js",
   ])
     .pipe(concat("main.min.js"))
