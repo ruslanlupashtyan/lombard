@@ -16,10 +16,14 @@
             .flex.jc-between
               .field
                 p Проба
-                select#gold_probe(data-placeholder="true", value="0")
-                  option(value=1) 1
-                  option(value=2) 2
-                  option(value=3) 3
+                select#gold_probe
+                  option(value=669.45) 375
+                  option(value=922.60) 500
+                  option(value=1102.81) 583
+                  option(value=1106.91) 585
+                  option(value=1428.90) 750
+                  option(value=1732.68) 900
+                  option(value=1850.14) 958
               .field
                 p Вага, г
                 input(type="number", name="")
@@ -28,7 +32,7 @@
                 p Приблизна оцінка вартості виробу:
               .total__count 
                 p 2300
-            a.calculate 
+            a.calculate.gold-calculate
               p Розрахувати вартість онлайн
               include ../../images/arrow.svg
           .item(data-type="silver")
@@ -36,9 +40,9 @@
               .field
                 p Проба
                 select#silver_probe(data-placeholder="true", value="0")
-                  option(value=1) 1
-                  option(value=2) 2
-                  option(value=3) 3
+                  option(value=12) 800
+                  option(value=13) 875
+                  option(value=16) 925
               .field
                 p Вага, г
                 input(type="number", name="")
@@ -47,7 +51,7 @@
                 p Приблизна оцінка вартості виробу:
               .total__count 
                 p 2300
-            a.calculate 
+            a.calculate.silver-calculate
               p Розрахувати вартість онлайн
               include ../../images/arrow.svg
 
@@ -72,21 +76,17 @@
             .stars
               p Стан
               .stars__container
-                .star
-                  include ../../images/star.svg
-                  p 1
-                .star
-                  include ../../images/star.svg
-                  p 2
-                .star
-                  include ../../images/star.svg
-                  p 3
-                .star
-                  include ../../images/star.svg
-                  p 4
-                .star
-                  include ../../images/star.svg
-                  p 5
+                .rating
+                  input(type="radio" name="rating" id="rating-5")
+                  label(for="rating-5")
+                  input(type="radio" name="rating" id="rating-4")
+                  label(for="rating-4")
+                  input(type="radio" name="rating" id="rating-3")
+                  label(for="rating-3")
+                  input(type="radio" name="rating" id="rating-2")
+                  label(for="rating-2")
+                  input(type="radio" name="rating" id="rating-1")
+                  label(for="rating-1")
             .flex.jc-between
               .field 
                 p Ім'я

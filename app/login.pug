@@ -1,0 +1,26 @@
+- var title = 'TITLE'
+- var gTag = 'G-'
+doctype html
+html(lang="uk")
+  include pug/sections/global/head.pug
+  body
+    .login-wrapper
+      .login-wrapper__left
+        .login-wrapper__right 
+          .login
+            .login__header.flex.jc-evenly
+              a.btn.btn-back.flex.ai-center
+                include images/arrow.svg
+                p Повернутись назад
+              include images/logo_d.svg
+            .login__body 
+              form.form(action="")
+                .form__item.item
+                  p Логін
+                  input(type="text")
+                .form__item.item
+                  p Пароль
+                  input(type="password")
+                a.btn.authorise Увійти
+            .login__footer
+              p Всі права захищено, 2023

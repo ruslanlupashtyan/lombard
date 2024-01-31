@@ -359,10 +359,14 @@
                 <div class="flex jc-between">
                   <div class="field">
                     <p>Проба</p>
-                    <select id="gold_probe" data-placeholder="true" value="0">
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
+                    <select id="gold_probe">
+                      <option value="669.45">375</option>
+                      <option value="922.6">500</option>
+                      <option value="1102.81">583</option>
+                      <option value="1106.91">585</option>
+                      <option value="1428.9">750</option>
+                      <option value="1732.68">900</option>
+                      <option value="1850.14">958</option>
                     </select>
                   </div>
                   <div class="field">
@@ -377,7 +381,7 @@
                   <div class="total__count"> 
                     <p>2300</p>
                   </div>
-                </div><a class="calculate"> 
+                </div><a class="calculate gold-calculate">
                   <p>Розрахувати вартість онлайн</p><svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M9.84113 3.35201L7.50513 1.03201L8.24113 0.312012L11.7611 3.86401L8.24113 7.40001L7.50513 6.68001L9.84113 4.36001L0.609131 4.37601V3.35201H9.84113Z" fill="black"/>
 </svg>
@@ -388,9 +392,9 @@
                   <div class="field">
                     <p>Проба</p>
                     <select id="silver_probe" data-placeholder="true" value="0">
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
+                      <option value="12">800</option>
+                      <option value="13">875</option>
+                      <option value="16">925</option>
                     </select>
                   </div>
                   <div class="field">
@@ -405,7 +409,7 @@
                   <div class="total__count"> 
                     <p>2300</p>
                   </div>
-                </div><a class="calculate"> 
+                </div><a class="calculate silver-calculate">
                   <p>Розрахувати вартість онлайн</p><svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M9.84113 3.35201L7.50513 1.03201L8.24113 0.312012L11.7611 3.86401L8.24113 7.40001L7.50513 6.68001L9.84113 4.36001L0.609131 4.37601V3.35201H9.84113Z" fill="black"/>
 </svg>
@@ -435,35 +439,17 @@
                 <div class="stars">
                   <p>Стан</p>
                   <div class="stars__container">
-                    <div class="star"><svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M18.0245 1.08156C18.1741 0.620906 18.8259 0.620902 18.9755 1.08156L22.627 12.3197C22.8278 12.9377 23.4038 13.3561 24.0536 13.3561H35.87C36.3544 13.3561 36.5558 13.9759 36.1639 14.2606L26.6042 21.2062C26.0785 21.5881 25.8585 22.2652 26.0593 22.8832L29.7108 34.1213C29.8605 34.582 29.3332 34.965 28.9414 34.6803L19.3817 27.7348C18.8559 27.3528 18.1441 27.3528 17.6183 27.7348L8.05862 34.6803C7.66677 34.965 7.13953 34.582 7.2892 34.1213L10.9407 22.8832C11.1415 22.2652 10.9215 21.5881 10.3958 21.2062L0.836075 14.2606C0.444217 13.9759 0.645606 13.3561 1.12997 13.3561H12.9464C13.5962 13.3561 14.1722 12.9377 14.373 12.3197L18.0245 1.08156Z" stroke="white"/>
-</svg>
-
-                      <p>1</p>
-                    </div>
-                    <div class="star"><svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M18.0245 1.08156C18.1741 0.620906 18.8259 0.620902 18.9755 1.08156L22.627 12.3197C22.8278 12.9377 23.4038 13.3561 24.0536 13.3561H35.87C36.3544 13.3561 36.5558 13.9759 36.1639 14.2606L26.6042 21.2062C26.0785 21.5881 25.8585 22.2652 26.0593 22.8832L29.7108 34.1213C29.8605 34.582 29.3332 34.965 28.9414 34.6803L19.3817 27.7348C18.8559 27.3528 18.1441 27.3528 17.6183 27.7348L8.05862 34.6803C7.66677 34.965 7.13953 34.582 7.2892 34.1213L10.9407 22.8832C11.1415 22.2652 10.9215 21.5881 10.3958 21.2062L0.836075 14.2606C0.444217 13.9759 0.645606 13.3561 1.12997 13.3561H12.9464C13.5962 13.3561 14.1722 12.9377 14.373 12.3197L18.0245 1.08156Z" stroke="white"/>
-</svg>
-
-                      <p>2</p>
-                    </div>
-                    <div class="star"><svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M18.0245 1.08156C18.1741 0.620906 18.8259 0.620902 18.9755 1.08156L22.627 12.3197C22.8278 12.9377 23.4038 13.3561 24.0536 13.3561H35.87C36.3544 13.3561 36.5558 13.9759 36.1639 14.2606L26.6042 21.2062C26.0785 21.5881 25.8585 22.2652 26.0593 22.8832L29.7108 34.1213C29.8605 34.582 29.3332 34.965 28.9414 34.6803L19.3817 27.7348C18.8559 27.3528 18.1441 27.3528 17.6183 27.7348L8.05862 34.6803C7.66677 34.965 7.13953 34.582 7.2892 34.1213L10.9407 22.8832C11.1415 22.2652 10.9215 21.5881 10.3958 21.2062L0.836075 14.2606C0.444217 13.9759 0.645606 13.3561 1.12997 13.3561H12.9464C13.5962 13.3561 14.1722 12.9377 14.373 12.3197L18.0245 1.08156Z" stroke="white"/>
-</svg>
-
-                      <p>3</p>
-                    </div>
-                    <div class="star"><svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M18.0245 1.08156C18.1741 0.620906 18.8259 0.620902 18.9755 1.08156L22.627 12.3197C22.8278 12.9377 23.4038 13.3561 24.0536 13.3561H35.87C36.3544 13.3561 36.5558 13.9759 36.1639 14.2606L26.6042 21.2062C26.0785 21.5881 25.8585 22.2652 26.0593 22.8832L29.7108 34.1213C29.8605 34.582 29.3332 34.965 28.9414 34.6803L19.3817 27.7348C18.8559 27.3528 18.1441 27.3528 17.6183 27.7348L8.05862 34.6803C7.66677 34.965 7.13953 34.582 7.2892 34.1213L10.9407 22.8832C11.1415 22.2652 10.9215 21.5881 10.3958 21.2062L0.836075 14.2606C0.444217 13.9759 0.645606 13.3561 1.12997 13.3561H12.9464C13.5962 13.3561 14.1722 12.9377 14.373 12.3197L18.0245 1.08156Z" stroke="white"/>
-</svg>
-
-                      <p>4</p>
-                    </div>
-                    <div class="star"><svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M18.0245 1.08156C18.1741 0.620906 18.8259 0.620902 18.9755 1.08156L22.627 12.3197C22.8278 12.9377 23.4038 13.3561 24.0536 13.3561H35.87C36.3544 13.3561 36.5558 13.9759 36.1639 14.2606L26.6042 21.2062C26.0785 21.5881 25.8585 22.2652 26.0593 22.8832L29.7108 34.1213C29.8605 34.582 29.3332 34.965 28.9414 34.6803L19.3817 27.7348C18.8559 27.3528 18.1441 27.3528 17.6183 27.7348L8.05862 34.6803C7.66677 34.965 7.13953 34.582 7.2892 34.1213L10.9407 22.8832C11.1415 22.2652 10.9215 21.5881 10.3958 21.2062L0.836075 14.2606C0.444217 13.9759 0.645606 13.3561 1.12997 13.3561H12.9464C13.5962 13.3561 14.1722 12.9377 14.373 12.3197L18.0245 1.08156Z" stroke="white"/>
-</svg>
-
-                      <p>5</p>
+                    <div class="rating">
+                      <input type="radio" name="rating" id="rating-5"/>
+                      <label for="rating-5"></label>
+                      <input type="radio" name="rating" id="rating-4"/>
+                      <label for="rating-4"></label>
+                      <input type="radio" name="rating" id="rating-3"/>
+                      <label for="rating-3"></label>
+                      <input type="radio" name="rating" id="rating-2"/>
+                      <label for="rating-2"></label>
+                      <input type="radio" name="rating" id="rating-1"/>
+                      <label for="rating-1"></label>
                     </div>
                   </div>
                 </div>
@@ -1158,17 +1144,12 @@
     </div>
     <div class="map"> 
       <h2 class="map__title">Наші відділення поруч</h2>
-      <div class="map__direction direction flex jc-center">
-        <select class="direction__select" id="direction_select" name="adress">
-          <option data-placeholder="true" value="select">Оберіть відділення</option>
-          <option value="Holovna">Головна</option>
-          <option value="Entusiastiv">Ентузіастів</option>
-        </select>
-        <button class="direction__btn create-direction"><svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M17.2002 9.9998L0.400195 19.6993L0.400196 0.300319L17.2002 9.9998Z" fill="white"/>
-</svg>
-
-        </button>
+      <div class="map__direction direction flex jc-center flex-column">
+        <h4 class="direction-text">Оберіть відділення:</h4>
+        <div class="direction-buttons">
+          <button class="create-direction" data-direction="{&quot;lat&quot;: 48.27456619246482, &quot;lng&quot;: 25.944843728835497}">Головна</button>
+          <button class="create-direction" data-direction="{&quot;lat&quot;: 48.25919151071051, &quot;lng&quot;: 25.95095058834852}">Ентузіастів</button>
+        </div>
       </div>
       <div id="map"></div>
     </div>

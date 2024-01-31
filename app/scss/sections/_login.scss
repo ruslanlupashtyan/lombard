@@ -1,0 +1,65 @@
+.login-wrapper {
+  &__left {
+    height: 100vh;
+    background-image: url(../../images/BG.svg);
+    background-repeat: no-repeat;
+  }
+  &__right {
+    height: 100vh;
+    background-image: url(../../images/BG.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+}
+.login {
+  &__header {
+    padding: 15px 0;
+    border-bottom: 1px solid $gray-color;
+    .btn {
+      svg {
+        transform: rotate(180deg);
+        margin-right: 10px;
+      }
+    }
+  }
+  &__body {
+    padding: 175px 0;
+    form {
+      margin: 0 auto;
+      max-width: 510px;
+      p {
+        @include font(12, 14, 400);
+        margin-bottom: 7px;
+      }
+      input {
+        width: 100%;
+        border: none;
+        padding: 20px;
+        @include font(16, 20, 400);
+        color: $crystal-white-color;
+        border-radius: 3px;
+        margin-bottom: 10px;
+      }
+      .btn {
+        background-color: $red-color;
+        color: $white-color;
+        @include font(16, 20, 400);
+        padding: 12px;
+        display: block;
+        width: fit-content;
+        margin: 0 auto;
+      }
+    }
+  }
+  &__footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    padding: 15px;
+    border-top: 1px solid $gray-color;
+    background-color: $white-color;
+    p {
+      text-align: center;
+    }
+  }
+}

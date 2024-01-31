@@ -1,14 +1,9 @@
+//! MAP
 let map;
-
 async function initMap() {
-  // The location of Uluru
   const position = { lat: 48.26403532424799, lng: 25.928222491859717 };
-  // Request needed libraries.
-  //@ts-ignore
   const { Map } = await google.maps.importLibrary("maps");
   const { AdvancedMarkerView } = await google.maps.importLibrary("marker");
-
-  // The map, centered at Uluru
   map = new Map(document.querySelector("#map"), {
     zoom: 16,
     center: position,
@@ -17,20 +12,12 @@ async function initMap() {
   let directionsService = new google.maps.DirectionsService();
   let directionsRenderer = new google.maps.DirectionsRenderer();
   directionsRenderer.setMap(map);
-
-  // The marker, positioned at Uluru
-  // const marker = new AdvancedMarkerView({
-  //   map: map,
-  //   position: position,
-  //   title: "Uluru",
-  // });
   let markers = [
     ["Головна", 48.27456619246482, 25.944843728835497],
     ["Ентузіастів", 48.25881881416417, 25.950695872771263],
   ];
   for (let i = 0; i < markers.length; i++) {
     let mark = markers[i];
-    console.log(mark);
     new google.maps.Marker({
       position: { lat: mark[1], lng: mark[2] },
       map,
@@ -44,7 +31,6 @@ async function initMap() {
     strokeWeight: 0,
     anchor: new google.maps.Point(15, 30),
   };
-
   function calculateAndDisplayRoute(
     directionsRenderer,
     directionsService,
@@ -64,100 +50,40 @@ async function initMap() {
         window.alert("Directions request failed due to " + e);
       });
   }
-
-  let createDirection = document.querySelector(".create-direction");
-  // createDirection.addEventListener("click", function () {
-  //   let directionSelect = document.querySelector(".map .direction");
-  //   console.log(directionSelect);
-  //   navigator.geolocation.getCurrentPosition(function (position) {
-  //     var currentLatitude = position.coords.latitude;
-  //     var currentLongitude = position.coords.longitude;
-  //     console.log(currentLatitude);
-  //     console.log(currentLongitude);
-  //     // if (!prevMarker) {
-  //     //   prevMarker.setMap(null);
-  //     // }
-  //     let currentMarker = new google.maps.Marker({
-  //       position: { lat: currentLatitude, lng: currentLongitude },
-  //       map: map,
-  //       icon: currentSvgMarker,
-  //       center: map.setCenter(
-  //         new google.maps.LatLng(currentLatitude, currentLongitude)
-  //       ),
-  //     });
-  //     // prevMarker = currentMarker;
-  //     // createDirection.setAttribute(
-  //     //   "data-position",
-  //     //   `{"lat":${position.coords.latitude}, "lng":${position.coords.longitude}`
-  //     // );
-  //     let Dest = { lat: 48.27456619246482, lng: 25.944843728835497 };
-  //     let Curr = { lat: currentLatitude, lng: currentLongitude };
-  //     console.log(Dest);
-  //     console.log(Curr);
-  //     calculateAndDisplayRoute(
-  //       directionsRenderer,
-  //       directionsService,
-  //       Dest,
-  //       Curr
-  //     );
-  //     console.log(selectedValue);
-  //   });
-  // });
+  let createDirection = document.querySelectorAll(".create-direction");
+  createDirection.forEach((el) => {
+    el.addEventListener("click", function () {
+      let directionSelect = document.querySelector(".map .direction");
+      console.log(this);
+      navigator.geolocation.getCurrentPosition(function (position) {
+        var currentLatitude = position.coords.latitude;
+        var currentLongitude = position.coords.longitude;
+        // if (!prevMarker) {
+        //   prevMarker.setMap(null);
+        // }
+        let currentMarker = new google.maps.Marker({
+          position: { lat: currentLatitude, lng: currentLongitude },
+          map: map,
+          icon: currentSvgMarker,
+          center: map.setCenter(
+            new google.maps.LatLng(currentLatitude, currentLongitude)
+          ),
+        });
+        let Dest = JSON.parse(el.getAttribute("data-direction"));
+        let Curr = { lat: currentLatitude, lng: currentLongitude };
+        console.log(Dest);
+        console.log(Curr);
+        calculateAndDisplayRoute(
+          directionsRenderer,
+          directionsService,
+          Dest,
+          Curr
+        );
+      });
+    });
+  });
 }
-
 initMap();
-
-// let infoWindow;
-
-// async function initMap() {
-//   map = new google.maps.Map(document.querySelector("#map"), {
-//     center: { lat: -34.397, lng: 150.644 },
-//     zoom: 6,
-//   });
-//   infoWindow = new google.maps.InfoWindow();
-
-//   const locationButton = document.createElement("button");
-
-//   locationButton.textContent = "Pan to Current Location";
-//   locationButton.classList.add("custom-map-control-button");
-//   map.controls[google.maps.ControlPosition.TOP_CENTER].push(locationButton);
-//   locationButton.addEventListener("click", () => {
-//     // Try HTML5 geolocation.
-//     if (navigator.geolocation) {
-//       navigator.geolocation.getCurrentPosition(
-//         (position) => {
-//           const pos = {
-//             lat: position.coords.latitude,
-//             lng: position.coords.longitude,
-//           };
-
-//           infoWindow.setPosition(pos);
-//           infoWindow.setContent("Location found.");
-//           infoWindow.open(map);
-//           map.setCenter(pos);
-//         },
-//         () => {
-//           handleLocationError(true, infoWindow, map.getCenter());
-//         }
-//       );
-//     } else {
-//       // Browser doesn't support Geolocation
-//       handleLocationError(false, infoWindow, map.getCenter());
-//     }
-//   });
-// }
-
-// function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-//   infoWindow.setPosition(pos);
-//   infoWindow.setContent(
-//     browserHasGeolocation
-//       ? "Error: The Geolocation service failed."
-//       : "Error: Your browser doesn't support geolocation."
-//   );
-//   infoWindow.open(map);
-// }
-
-// window.initMap = initMap;
 
 // !Mobile Menu
 document.querySelector(".hamburger").addEventListener("click", function () {
@@ -219,7 +145,6 @@ let mobileTabs = document.querySelectorAll(
   ".calculator .mobile .item .item__head"
 );
 let mobileItems = document.querySelectorAll(".calculator .mobile .item");
-
 mobileTabs.forEach((el) => {
   el.addEventListener("click", function () {
     mobileItems.forEach((i) => {
@@ -227,4 +152,32 @@ mobileTabs.forEach((el) => {
     });
     el.closest(".item").classList.add("active");
   });
+});
+
+let goldValues;
+let silverValues;
+
+function probeinit() {
+  goldValues = goldSelect.getSelected();
+  silverValues = silverSelect.getSelected();
+}
+
+function Calculate(target, probe) {
+  let count =
+    probe * target.closest(".item").querySelector("input").value + " грн";
+  target.closest(".item").querySelector(".total__count p").innerHTML = count;
+  setTimeout(() => {
+    console.log(probe);
+  }, 10000);
+  console.log(target.closest(".item"));
+}
+
+document.querySelector("a.gold-calculate").addEventListener("click", (e) => {
+  probeinit();
+  Calculate(e.target, goldValues);
+});
+
+document.querySelector("a.silver-calculate").addEventListener("click", (e) => {
+  probeinit();
+  Calculate(e.target, silverValues);
 });

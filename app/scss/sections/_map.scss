@@ -17,4 +17,15 @@
   #map {
     border: 1px solid $red-color;
   }
+  .direction-buttons,
+  .direction-text {
+    width: fit-content;
+    margin: 0 auto;
+  }
+  .create-direction {
+    color: $white-color;
+    background-color: $red-color;
+    border-radius: 3px;
+    padding: 10px 25px;
+  }
 }
