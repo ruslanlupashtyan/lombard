@@ -1,0 +1,35 @@
+header.header
+	div.header__container
+		div.top_menu
+			div.logo
+				img(src="../img/parts/logo.svg" alt="logo")
+			
+			div.buttons
+				a(href="javascript:;" class="btn save") Save
+				a(href="javascript:;" class="btn cancel") Cancel
+			
+		
+		div.left_menu
+			div.user_holder
+				img(src="../img/parts/user.svg" alt="user")
+				p.username Admin
+			
+			div.side_menu
+				ul
+					li.menu_item(class=( page == 'promo-list' ? 'active' : '' ))
+						a(href="/admin.html") Promo
+
+					li.menu_item(class=( page == 'tiles' ? 'active' : '' ))
+						a(href="/tiles.html") Main banner
+					
+					li.menu_item
+						a(href="javascript:;") Requests
+					
+					li.menu_item.disabled(data-count="1")
+						a(href="javascript:;") Chat-room
+			
+			div.buttons
+				a(href="javascript:;" class="btn logout") Logout
+			
+		
+	

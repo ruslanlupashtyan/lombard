@@ -1,0 +1,118 @@
+$white: #F2F0ED;
+$text_black: #151112;
+$red: #F10A01;
+$red25: #f3a19e;
+
+.btn{
+	height: 45px;
+	@include font(16, 40, 200);
+	text-align: center;
+	padding: 0 20px;
+	color: #fff;
+	display: block;
+	border-bottom: 2px solid rgba(0, 0, 0, 0.25);
+	border-radius: 5px;
+	min-width: 150px;
+	text-align: center;
+	&.save{
+		background-color: #49bb1d;
+	}
+	&.cancel{
+		background-color: #fb3635;
+	}
+	&.logout{
+		background-color: #6242cf;
+	}
+}
+
+.header__container{
+	position: relative;
+	.top_menu{
+		background-color: $white;
+		height: 80px;
+		padding: 15px;
+		width: 100%;
+		position: fixed;
+		top: 0;
+		left: 0;
+		display: flex;
+		justify-content: space-between;
+		z-index: 1;
+		@include box-shadow(210px 1px 3px $text_black);
+		.buttons{
+			display: flex;
+			.btn{
+				margin-right: 15px;
+				&:last-child{
+					margin-right: unset;
+				}
+			}
+		}
+	}
+	.left_menu {
+			position: fixed;
+			top: 80px;
+			left: 0;
+			width: 210px;
+			height: calc(100% - 80px);
+			background-color: $red;
+			display: flex;
+			flex-direction: column;
+			padding: 20px;
+			.user_holder{
+				margin: 0 auto;
+				margin-bottom: 20px;
+			}
+			.side_menu{
+				.menu_item {
+					margin-bottom: 10px;
+					position: relative;
+					&:last-child{
+						margin-bottom: unset;
+					}
+					&:hover a{
+						@include box-shadow(1px 1px 4px rgba(255, 255, 255, 1));
+					}
+					&[data-count]::after{
+						content: attr(data-count);
+						position: absolute;
+						background-color: #fff;
+						border-radius: 50%;
+						top: -5px;
+						right: -5px;
+						min-width: 20px;
+						font-size: 10px;
+						line-height: 20px;
+						text-align: center;
+					}
+					a {
+						display: block;
+						font-size: 16px;
+						line-height: 45px;
+						color: $white;
+						text-align: center;
+						border-radius: 5px;
+					}
+					&.active a{
+						background-color: $white;
+						color: $text_black;
+						pointer-events: none;
+					}
+					&.disabled a{
+						background-color: $red25;
+						cursor: not-allowed;
+					}
+					&.active a,
+					&.disabled a{
+						box-shadow: none;
+					}
+				}
+			}
+			.buttons{
+				margin-top: auto;
+			}
+	}
+}
+.admin-wrapper{
+    padding: 100px 0 40px 240px;    
+}

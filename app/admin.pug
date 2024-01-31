@@ -1,196 +1,142 @@
-- var title = 'TITLE'
-- var gTag = 'G-'
+- var title = '{A} Mainpage';
 doctype html
 html(lang="uk")
-  include pug/sections/global/head.pug
+  include pug/sections/global/head-admin
   body
     .admin-wrapper
-      .admin-wrapper__left
-        .admin-wrapper__right 
-          .admin
-            .admin__header.flex.jc-evenly
-              a.btn.btn-back.flex.ai-center
-                include images/arrow.svg
-                p Повернутись назад
-              include images/logo_d.svg
-            .admin__body 
-              section.promotions.container 
-                h2.promotions__title Головні акції
-                .promotions__items.items.flex.wrap.jc-between 
-                  .items__item.item.admin-item
-                    .item__image 
-                      img(src="images/001.webp", alt="")
-                    h5.item__title Заголовок Акції
-                    .item__descr 
-                      p Office ipsum you must be muted. Pretend let data job minimize. Shark spaces shoot pollination strategies.
-                    .item__exp
-                      p Діє до: 31.12.2024
-                    .item__btns.flex.ai-center.jc-center
-                      button.edit Редагувати
-                      button.delete Видалити
-                  .items__item.item.admin-item.hidden
-                    .item__image 
-                      img(src="images/002.webp", alt="")
-                    h5.item__title Заголовок Акції
-                    .item__descr 
-                      p Office ipsum you must be muted. Pretend let data job minimize. Shark spaces shoot pollination strategies.
-                    .item__exp
-                      p Діє до: 31.12.2024
-                    .item__btns.flex.ai-center.jc-center
-                      button.edit Редагувати
-                      button.delete Видалити
-                  .items__item.item.admin-item 
-                    .item__image 
-                      img(src="images/003.webp", alt="")
-                    h5.item__title Заголовок Акції
-                    .item__descr 
-                      p Office ipsum you must be muted. Pretend let data job minimize. Shark spaces shoot pollination strategies.
-                    .item__exp
-                      p Діє до: 31.12.2024
-                    .item__btns.flex.ai-center.jc-center
-                      button.edit Редагувати
-                      button.delete Видалити
-                  .items__item.item.admin-item 
-                    .item__image 
-                      img(src="images/004.webp", alt="")
-                    h5.item__title Заголовок Акції
-                    .item__descr 
-                      p Office ipsum you must be muted. Pretend let data job minimize. Shark spaces shoot pollination strategies.
-                    .item__exp
-                      p Діє до: 31.12.2024
-                    .item__btns.flex.ai-center.jc-center
-                      button.edit Редагувати
-                      button.delete Видалити
-
-              .promotions.container 
-                h2.promotions__title Акції
-                .promotions__items.items.flex.wrap.jc-between 
-                  .items__item.item.admin-item
-                    .item__image 
-                      img(src="images/001.webp", alt="")
-                    h5.item__title Заголовок Акції
-                    .item__descr 
-                      p Office ipsum you must be muted. Pretend let data job minimize. Shark spaces shoot pollination strategies.
-                    .item__exp
-                      p Діє до: 31.12.2024
-                    .item__btns.flex.ai-center.jc-center
-                      button.edit Редагувати
-                      button.delete Видалити
-                  .items__item.item.admin-item 
-                    .item__image 
-                      img(src="images/002.webp", alt="")
-                    h5.item__title Заголовок Акції
-                    .item__descr 
-                      p Office ipsum you must be muted. Pretend let data job minimize. Shark spaces shoot pollination strategies.
-                    .item__exp
-                      p Діє до: 31.12.2024
-                    .item__btns.flex.ai-center.jc-center
-                      button.edit Редагувати
-                      button.delete Видалити
-                  .items__item.item.admin-item
-                    .item__image 
-                      img(src="images/003.webp", alt="")
-                    h5.item__title Заголовок Акції
-                    .item__descr 
-                      p Office ipsum you must be muted. Pretend let data job minimize. Shark spaces shoot pollination strategies.
-                    .item__exp
-                      p Діє до: 31.12.2024
-                    .item__btns.flex.ai-center.jc-center
-                      button.edit Редагувати
-                      button.delete Видалити
-                  .items__item.item.admin-item 
-                    .item__image 
-                      img(src="images/004.webp", alt="")
-                    h5.item__title Заголовок Акції
-                    .item__descr 
-                      p Office ipsum you must be muted. Pretend let data job minimize. Shark spaces shoot pollination strategies.
-                    .item__exp
-                      p Діє до: 31.12.2024
-                    .item__btns.flex.ai-center.jc-center
-                      button.edit Редагувати
-                      button.delete Видалити
-                  .items__item.item.admin-item 
-                    .item__image 
-                      img(src="images/005.webp", alt="")
-                    h5.item__title Заголовок Акції
-                    .item__descr 
-                      p Office ipsum you must be muted. Pretend let data job minimize. Shark spaces shoot pollination strategies.
-                    .item__exp
-                      p Діє до: 31.12.2024
-                    .item__btns.flex.ai-center.jc-center
-                      button.edit Редагувати
-                      button.delete Видалити
-                  .items__item.item.admin-item 
-                    .item__image 
-                      img(src="images/006.webp", alt="")
-                    h5.item__title Заголовок Акції
-                    .item__descr 
-                      p Office ipsum you must be muted. Pretend let data job minimize. Shark spaces shoot pollination strategies.
-                    .item__exp
-                      p Діє до: 31.12.2024
-                    .item__btns.flex.ai-center.jc-center
-                      button.edit Редагувати
-                      button.delete Видалити
-                  .items__item.item.admin-item 
-                    .item__image 
-                      img(src="images/007.webp", alt="")
-                    h5.item__title Заголовок Акції
-                    .item__descr 
-                      p Office ipsum you must be muted. Pretend let data job minimize. Shark spaces shoot pollination strategies.
-                    .item__exp
-                      p Діє до: 31.12.2024
-                    .item__btns.flex.ai-center.jc-center
-                      button.edit Редагувати
-                      button.delete Видалити
-                  .items__item.item.admin-item 
-                    .item__image 
-                      img(src="images/008.webp", alt="")
-                    h5.item__title Заголовок Акції
-                    .item__descr 
-                      p Office ipsum you must be muted. Pretend let data job minimize. Shark spaces shoot pollination strategies.
-                    .item__exp
-                      p Діє до: 31.12.2024
-                    .item__btns.flex.ai-center.jc-center
-                      button.edit Редагувати
-                      button.delete Видалити
-                  .items__item.item.admin-item 
-                    .item__image 
-                      img(src="images/001.webp", alt="")
-                    h5.item__title Заголовок Акції
-                    .item__descr 
-                      p Office ipsum you must be muted. Pretend let data job minimize. Shark spaces shoot pollination strategies.
-                    .item__exp
-                      p Діє до: 31.12.2024
-                    .item__btns.flex.ai-center.jc-center
-                      button.edit Редагувати
-                      button.delete Видалити
-                  .items__item.item.admin-item 
-                    .item__image 
-                      img(src="images/002.webp", alt="")
-                    h5.item__title Заголовок Акції
-                    .item__descr 
-                      p Office ipsum you must be muted. Pretend let data job minimize. Shark spaces shoot pollination strategies.
-                    .item__exp
-                      p Діє до: 31.12.2024
-                    .item__btns.flex.ai-center.jc-center
-                      button.edit Редагувати
-                      button.delete Видалити
-                ul.promotions__pagination.flex.jc-center
-                  li.pagination 
-                    include images/page-arrow.svg
-                  li.pagination.active
-                    p 1
-                  li.pagination 
-                    p 2
-                  li.pagination 
-                    p 3
-                  li.pagination 
-                    p 4
-                  li.pagination 
-                    p 5
-                  li.pagination 
-                    include images/page-arrow.svg
-            .admin__footer
-              p Всі права захищено, 2023
+      - var page = 'promo-list';
+      include pug/sections/global/admin-top
+      .admin
+        .admin__body 
+          section.promotions.container 
+            h2.promotions__title Акції
+            .promotions__items.items.flex.wrap.jc-between 
+              .items__item.item.admin-item
+                .item__image 
+                  img(src="images/001.webp", alt="")
+                h5.item__title Заголовок Акції
+                .item__descr 
+                  p Office ipsum you must be muted. Pretend let data job minimize. Shark spaces shoot pollination strategies.
+                .item__exp
+                  p Діє до: 31.12.2024
+                .item__btns.flex.ai-center.jc-center
+                  button.edit Редагувати
+                  button.delete Видалити
+              .items__item.item.admin-item 
+                .item__image 
+                  img(src="images/002.webp", alt="")
+                h5.item__title Заголовок Акції
+                .item__descr 
+                  p Office ipsum you must be muted. Pretend let data job minimize. Shark spaces shoot pollination strategies.
+                .item__exp
+                  p Діє до: 31.12.2024
+                .item__btns.flex.ai-center.jc-center
+                  button.edit Редагувати
+                  button.delete Видалити
+              .items__item.item.admin-item
+                .item__image 
+                  img(src="images/003.webp", alt="")
+                h5.item__title Заголовок Акції
+                .item__descr 
+                  p Office ipsum you must be muted. Pretend let data job minimize. Shark spaces shoot pollination strategies.
+                .item__exp
+                  p Діє до: 31.12.2024
+                .item__btns.flex.ai-center.jc-center
+                  button.edit Редагувати
+                  button.delete Видалити
+              .items__item.item.admin-item 
+                .item__image 
+                  img(src="images/004.webp", alt="")
+                h5.item__title Заголовок Акції
+                .item__descr 
+                  p Office ipsum you must be muted. Pretend let data job minimize. Shark spaces shoot pollination strategies.
+                .item__exp
+                  p Діє до: 31.12.2024
+                .item__btns.flex.ai-center.jc-center
+                  button.edit Редагувати
+                  button.delete Видалити
+              .items__item.item.admin-item 
+                .item__image 
+                  img(src="images/005.webp", alt="")
+                h5.item__title Заголовок Акції
+                .item__descr 
+                  p Office ipsum you must be muted. Pretend let data job minimize. Shark spaces shoot pollination strategies.
+                .item__exp
+                  p Діє до: 31.12.2024
+                .item__btns.flex.ai-center.jc-center
+                  button.edit Редагувати
+                  button.delete Видалити
+              .items__item.item.admin-item 
+                .item__image 
+                  img(src="images/006.webp", alt="")
+                h5.item__title Заголовок Акції
+                .item__descr 
+                  p Office ipsum you must be muted. Pretend let data job minimize. Shark spaces shoot pollination strategies.
+                .item__exp
+                  p Діє до: 31.12.2024
+                .item__btns.flex.ai-center.jc-center
+                  button.edit Редагувати
+                  button.delete Видалити
+              .items__item.item.admin-item 
+                .item__image 
+                  img(src="images/007.webp", alt="")
+                h5.item__title Заголовок Акції
+                .item__descr 
+                  p Office ipsum you must be muted. Pretend let data job minimize. Shark spaces shoot pollination strategies.
+                .item__exp
+                  p Діє до: 31.12.2024
+                .item__btns.flex.ai-center.jc-center
+                  button.edit Редагувати
+                  button.delete Видалити
+              .items__item.item.admin-item 
+                .item__image 
+                  img(src="images/008.webp", alt="")
+                h5.item__title Заголовок Акції
+                .item__descr 
+                  p Office ipsum you must be muted. Pretend let data job minimize. Shark spaces shoot pollination strategies.
+                .item__exp
+                  p Діє до: 31.12.2024
+                .item__btns.flex.ai-center.jc-center
+                  button.edit Редагувати
+                  button.delete Видалити
+              .items__item.item.admin-item 
+                .item__image 
+                  img(src="images/001.webp", alt="")
+                h5.item__title Заголовок Акції
+                .item__descr 
+                  p Office ipsum you must be muted. Pretend let data job minimize. Shark spaces shoot pollination strategies.
+                .item__exp
+                  p Діє до: 31.12.2024
+                .item__btns.flex.ai-center.jc-center
+                  button.edit Редагувати
+                  button.delete Видалити
+              .items__item.item.admin-item 
+                .item__image 
+                  img(src="images/002.webp", alt="")
+                h5.item__title Заголовок Акції
+                .item__descr 
+                  p Office ipsum you must be muted. Pretend let data job minimize. Shark spaces shoot pollination strategies.
+                .item__exp
+                  p Діє до: 31.12.2024
+                .item__btns.flex.ai-center.jc-center
+                  button.edit Редагувати
+                  button.delete Видалити
+            ul.promotions__pagination.flex.jc-center
+              li.pagination 
+                include images/page-arrow.svg
+              li.pagination.active
+                p 1
+              li.pagination 
+                p 2
+              li.pagination 
+                p 3
+              li.pagination 
+                p 4
+              li.pagination 
+                p 5
+              li.pagination 
+                include images/page-arrow.svg
+        .admin__footer
+          p Всі права захищено, 2023
     .edit-popup 
-      
+include pug/sections/global/footer-admin

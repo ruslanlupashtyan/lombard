@@ -1,0 +1,104 @@
+$red-soft: #f10a0129;
+$red-company: #F10A01;
+$grey: #c1c1c1;
+
+.draggable{
+	border-radius: 5px;
+	border: 1px dotted #b1b1b1;
+	background-color: #fff;
+	margin-bottom: 10px;
+	position: relative;
+	&:last-child{
+		margin-bottom: unset;
+	}
+	.picture_holder{
+		width: 100%;
+		height: 200px;
+		background-image: var(--img-url);
+		background-position: center;
+		background-size: cover;
+	}
+	i.dragging{
+		position: absolute;
+		cursor: grab;
+		border-top-left-radius: 5px;
+		border-bottom-left-radius: 5px;
+
+		--dot-bg: #d1d1d1;
+		--dot-color: white;
+		--dot-size: 1px;
+		--dot-space: 5px;
+		background:
+			linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+			linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+			var(--dot-color);
+	}
+}
+
+.tiles{
+	display: flex;
+	.side{
+		display: flex;
+		flex-direction: column;
+		&.main{
+			width: 540px;
+			.draggable{
+				height: 300px;
+				width: 500px;
+				@include box-shadow(2px 2px 4px $red-soft);
+				i.dragging{
+					width: 15px;
+					height: 200px;
+					top: 50%;
+					left: -15px;
+					transform: translateY(-50%);
+				}
+			}
+			.ui-sortable-placeholder{
+				height: 200px;
+				border-radius: 5px;
+				@include box-shadow(inset 2px 2px 4px $red-soft);
+				visibility: visible !important;
+			}
+		}
+		&.addition{
+			width: 350px;
+			.search{
+				margin-bottom: 10px;
+				.key{
+					@include font(18px, 20px, 200);
+					margin-bottom: 5px;
+				}
+				input[name="search"]{
+					width: 100%;
+					height: 30px;
+					padding: 0 10px;
+					@include font(16, 30, 200);
+					@include box-shadow(inset 1px 1px 3px $grey);
+					border: unset;
+					border-radius: 5px;
+				}
+			}
+			.draggable{
+				width: 100%;
+				height: 70px;
+				@include box-shadow(2px 2px 4px $red-soft);
+				display: flex;
+				position: relative;
+				.picture_holder{
+					height: 100%;
+					width: 70px;
+					border-top-left-radius: 5px;
+					border-bottom-left-radius: 5px;
+				}
+				i.dragging{
+					width: 15px;
+					height: 60px;
+					top: 50%;
+					left: -15px;
+					transform: translateY(-50%);
+				}
+			}
+		}
+	}
+}

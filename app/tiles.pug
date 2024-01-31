@@ -1,0 +1,57 @@
+- var title = '{A} Mainpage';
+doctype html
+html(lang="uk")
+  include pug/sections/global/head-admin
+  body
+    .admin-wrapper
+      - var page = 'tiles';
+      include pug/sections/global/admin-top
+      .admin
+        .admin__body.tiles.container
+          div.side.main#main_block
+            each item in [1,2,3,4,5,6]
+              //- 'url': 'url(../images/1.jpg)',
+              //- 'heading': 'Element 1',
+              //- 'alter': 'this is alter of element 1'
+              .draggable
+                .picture_holder(style=`--img-url:url(../img/${item}.jpg)`)
+                .data_holder
+                  p.heading Element #{item}
+                  p.alter this is alter of element #{item}
+                .controls
+                  a.btn_like(href="javascript:;") 
+                i.dragging
+          div.side.addition
+            div.search
+              div.input_holder
+                p.key Search
+                input(name="search" type="text" placeholder="please input keyword")
+            div.additional#search_block
+              each item in [7,8,9,10,11]
+                //- 'url': 'url(../images/1.jpg)',
+                //- 'heading': 'Element 1',
+                //- 'alter': 'this is alter of element 1'
+                .draggable
+                  .picture_holder(style=`--img-url:url(../img/${item}.jpg)`)
+                  .data_holder
+                    p.heading Element #{item}
+                    p.alter this is alter of element #{item}
+                  .controls
+                    a.btn_like(href="javascript:;") 
+                  i.dragging
+        .admin__footer
+          p Всі права захищено, 2023
+    .edit-popup 
+include pug/sections/global/footer-admin
+
+//- <div class="draggable">
+//-   <div class="picture_holder" style="--img-url:@@url"></div>
+//-   <div class="data_holder">
+//-     <p class="heading">@@heading</p>
+//-     <p class="alter">@@alter</p>
+//-   </div>
+//-   <div class="controls">
+//-     <a href="javascript:;" class="btn_like"></a>
+//-   </div>
+//-   <i class="dragging"></i>
+//- </div>
