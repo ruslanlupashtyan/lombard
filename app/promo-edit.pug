@@ -1,0 +1,46 @@
+- var title = '{A} Mainpage';
+doctype html
+html(lang="uk")
+	include pug/sections/global/head-admin
+	body
+	.admin-wrapper
+		- var page = 'promo-edit';
+		include pug/sections/global/admin-top
+		.admin
+		.admin__body.promo-edit.container
+			.input_holder
+				p.key Title
+				input(type="text" name="Title" placeholder="Title") 
+			.input_holder
+				p.key Meta-title
+				input(type="text" name="Meta-title" placeholder="Meta-title")
+			.textarea_holder
+				p.key Meta-description
+				textarea(name="Meta-description" placeholder="Meta-description")
+			.textarea_holder
+				p.key Short alt
+				textarea(name="Short-alt" placeholder="Short alt")
+			.image_holder 
+				p.key Image
+				p.key.sml JPG / JPEG / PNG / WEBP (max 20Mb)
+				.image_sample(style="--img-src:url(../img/10.jpg)")
+				.controls
+					a.btn.edit(href="javascript:;") Edit
+			.textarea_holder.editor
+				p.key Full text
+				textarea#editor(name="Full-text")
+			.input_holder.multiple
+				div.part
+					p.key Date start
+					input(type="text" name="date-start")
+				div.part
+					p.key Date end
+					input(type="text" name="date-end")
+				a.btn.visibility(href="javascript:;" data-text="Show/Hide")
+				a.btn.delete(href="javascript:;") Mark delete
+	.edit-popup 
+script(src="https://code.jquery.com/jquery-3.7.1.min.js")
+link(rel="stylesheet", href="js/datetimepicker/jquery.datetimepicker.min.css")
+script(src="js/datetimepicker/jquery.datetimepicker.full.js")
+script(src="js/tinymce_v3/tinymce.js")
+script(src="js/admin.js" defer)

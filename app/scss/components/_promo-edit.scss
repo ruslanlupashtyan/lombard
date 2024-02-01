@@ -1,0 +1,80 @@
+input,
+textarea,
+button,
+select,
+a {
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+*:focus {
+	outline: none;
+}
+
+.input_holder,
+.textarea_holder{
+	margin-bottom: 10px;
+	&:last-child{
+		margin-bottom: unset;
+	}
+	p.key{
+		margin-bottom: 5px;
+		&.sml{
+			font-size: 8px;
+		}
+	}
+	input, textarea{
+		width: 100%;
+		border: unset;
+		@include box-shadow(inset 1px -1px 4px $red-soft);
+		border-radius: 3px;
+		padding: 5px 15px;
+	}
+	&.multiple{
+		display: flex;
+		align-items: flex-end;
+		*{
+			margin-right: 5px;
+			&:last-child{
+				margin-right: unset;
+			}
+		}
+	}
+}
+
+.promo-edit.container{
+	background-color: #fafafa;
+	border-radius: 5px;
+	@include box-shadow(2px 2px 4px $red-soft);
+	padding: 30px;
+	margin-bottom: 180px;
+	.image_holder{
+		margin-bottom: 10px;
+		p.key{
+			margin-bottom: 3px;
+			&.sml{
+				font-size: 12px;
+			}
+		}
+		.image_sample{
+			background-color: $white;
+			border-radius: 5px;
+			background-image: var(--img-src);
+			background-position: center;
+			background-size: contain;
+			background-repeat: no-repeat;
+			width: 100%;
+			height: 400px;
+			margin-bottom: 10px;
+		}
+		.controls{
+			a.edit{
+				background-color: #007bff;
+				max-width: 200px;
+			}
+		}
+	}
+	.input_holder.multiple{
+		a.btn.visibility{
+			margin-left: auto;
+		}
+	}
+}

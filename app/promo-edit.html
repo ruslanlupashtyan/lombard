@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta property="og:image" content="">
+    <link rel="icon" href="" type="image/x-icon">
+    <title>{A} Mainpage</title>
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body></body>
+  <div class="admin-wrapper">
+    <header class="header">
+      <div class="header__container">
+        <div class="top_menu">
+          <div class="logo"><img src="../img/parts/logo.svg" alt="logo"></div>
+          <div class="buttons"><a class="btn save" href="javascript:;">Save</a><a class="btn cancel" href="javascript:;">Cancel</a></div>
+        </div>
+        <div class="left_menu">
+          <div class="user_holder"><img src="../img/parts/user.svg" alt="user">
+            <p class="username">Admin</p>
+          </div>
+          <div class="side_menu">
+            <ul>
+              <li class="menu_item"><a href="/admin.html">Promo</a></li>
+              <li class="menu_item"><a href="/tiles.html">Main banner</a></li>
+              <li class="menu_item"><a href="javascript:;">Requests</a></li>
+              <li class="menu_item disabled" data-count="1"><a href="javascript:;">Chat-room</a></li>
+            </ul>
+          </div>
+          <div class="buttons"><a class="btn logout" href="javascript:;">Logout</a></div>
+        </div>
+      </div>
+    </header>
+    <div class="admin"></div>
+    <div class="admin__body promo-edit container">
+      <div class="input_holder">
+        <p class="key">Title</p>
+        <input type="text" name="Title" placeholder="Title">
+      </div>
+      <div class="input_holder">
+        <p class="key">Meta-title</p>
+        <input type="text" name="Meta-title" placeholder="Meta-title">
+      </div>
+      <div class="textarea_holder">
+        <p class="key">Meta-description</p>
+        <textarea name="Meta-description" placeholder="Meta-description"></textarea>
+      </div>
+      <div class="textarea_holder">
+        <p class="key">Short alt</p>
+        <textarea name="Short-alt" placeholder="Short alt"></textarea>
+      </div>
+      <div class="image_holder"> 
+        <p class="key">Image</p>
+        <p class="key sml">JPG / JPEG / PNG / WEBP (max 20Mb)</p>
+        <div class="image_sample" style="--img-src:url(../img/10.jpg)"></div>
+        <div class="controls"><a class="btn edit" href="javascript:;">Edit</a></div>
+      </div>
+      <div class="textarea_holder editor">
+        <p class="key">Full text</p>
+        <textarea id="editor" name="Full-text"></textarea>
+      </div>
+      <div class="input_holder multiple">
+        <div class="part">
+          <p class="key">Date start</p>
+          <input type="text" name="date-start">
+        </div>
+        <div class="part">
+          <p class="key">Date end</p>
+          <input type="text" name="date-end">
+        </div><a class="btn visibility" href="javascript:;" data-text="Show/Hide"></a><a class="btn delete" href="javascript:;">Mark delete</a>
+      </div>
+    </div>
+  </div>
+  <div class="edit-popup"> </div>
+</html>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<link rel="stylesheet" href="js/datetimepicker/jquery.datetimepicker.min.css">
+<script src="js/datetimepicker/jquery.datetimepicker.full.js"></script>
+<script src="js/tinymce_v3/tinymce.js"></script>
+<script src="js/admin.js" defer></script>

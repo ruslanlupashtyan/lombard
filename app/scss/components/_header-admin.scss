@@ -5,7 +5,7 @@ $red25: #f3a19e;
 
 .btn{
 	height: 45px;
-	@include font(16, 40, 200);
+	@include font(16, 40, 600);
 	text-align: center;
 	padding: 0 20px;
 	color: #fff;
@@ -22,6 +22,22 @@ $red25: #f3a19e;
 	}
 	&.logout{
 		background-color: #6242cf;
+	}
+	&.visibility{
+		background-color: #16bf11;
+		&::after{
+			content: attr(data-text);
+			margin: 0 auto;
+			width: 100px;
+			text-align: center;
+		}
+		&.off{
+			background-color: #c1c1c1;
+			
+		}
+	}
+	&.delete{
+		background-color: #ab0100;
 	}
 }
 
@@ -114,5 +130,5 @@ $red25: #f3a19e;
 	}
 }
 .admin-wrapper{
-    padding: 100px 0 40px 240px;    
+	padding: 100px 0 40px 240px;    
 }

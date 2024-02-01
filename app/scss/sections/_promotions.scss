@@ -48,7 +48,7 @@
       bottom: 0;
       left: 0;
       @include font(16, 20, 400);
-      button {
+      button, a {
         border-radius: 3px;
         padding: 12px;
       }
