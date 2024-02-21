@@ -31,7 +31,7 @@ h1 {
 
 h2 {
   text-align: center;
-  @include font(48, 58, 700);
+  @include font(64, 76, 700);
   @include max-width(b-md) {
     @include font(32, 38, 700);
   }

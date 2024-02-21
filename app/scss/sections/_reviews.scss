@@ -1,0 +1,34 @@
+.reviews {
+  padding: 80px 15px;
+  .review {
+    padding: 15px;
+    color: $crystal-white-color;
+    background-color: $red-color;
+    margin-right: 10px;
+    &:last-child {
+      margin-right: unset;
+    }
+    &__top {
+      margin-bottom: 4px;
+    }
+    .date {
+      height: 24px;
+      @include font(14, 29, 400);
+      margin-right: 24px;
+    }
+    &__name {
+      margin-bottom: 12px;
+      @include font(20, 24, 400);
+    }
+    &__name p,
+    &__txt p {
+      color: $crystal-white-color;
+    }
+  }
+  .rating {
+    svg {
+      width: 17px;
+      height: 17px;
+    }
+  }
+}
