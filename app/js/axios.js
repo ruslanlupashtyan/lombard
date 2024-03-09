@@ -1320,88 +1320,88 @@
 });
 //# sourceMappingURL=axios.min.map
 
-const TOKEN = "6140255246:AAHsMGR4MIk6iHrMyCMItC5SHQpSPBG_mhM";
-const CHAT_ID = "-1001960888683";
-const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
+// const TOKEN = "6140255246:AAHsMGR4MIk6iHrMyCMItC5SHQpSPBG_mhM";
+// const CHAT_ID = "-1001960888683";
+// const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
 
-let modalForm = document.querySelector(".form");
-let popup = document.querySelector(".popup");
+// let modalForm = document.querySelector(".form");
+// let popup = document.querySelector(".popup");
 
-if (popup != null) {
-  popup.addEventListener("submit", function (e) {
-    e.preventDefault();
+// if (popup != null) {
+//   popup.addEventListener("submit", function (e) {
+//     e.preventDefault();
 
-    let message = `<b>КОНСУЛЬТАЦІЯ:</b>\n`,
-      name = this.querySelector("input[type='text']").value,
-      phone = this.querySelector("input[type='tel']").value;
-    message += `<b>Ім'я: </b>${name}\n`;
-    message += `<b>Номер телефону: </b>${phone}\n`;
+//     let message = `<b>КОНСУЛЬТАЦІЯ:</b>\n`,
+//       name = this.querySelector("input[type='text']").value,
+//       phone = this.querySelector("input[type='tel']").value;
+//     message += `<b>Ім'я: </b>${name}\n`;
+//     message += `<b>Номер телефону: </b>${phone}\n`;
 
-    if (name == "" || phone == "") {
-      console.log("err");
-    } else {
-      axios
-        .post(URI_API, {
-          chat_id: CHAT_ID,
-          parse_mode: "html",
-          text: message,
-        })
-        .then((res) => {
-          phone = "";
-        })
-        .catch((err) => {
-          console.warn(err);
-        })
-        .finally(() => {
-          console.log(message);
-        });
-    }
-  });
-}
+//     if (name == "" || phone == "") {
+//       console.log("err");
+//     } else {
+//       axios
+//         .post(URI_API, {
+//           chat_id: CHAT_ID,
+//           parse_mode: "html",
+//           text: message,
+//         })
+//         .then((res) => {
+//           phone = "";
+//         })
+//         .catch((err) => {
+//           console.warn(err);
+//         })
+//         .finally(() => {
+//           console.log(message);
+//         });
+//     }
+//   });
+// }
 
-modalForm.addEventListener("submit", function (e) {
-  e.preventDefault();
+// modalForm.addEventListener("submit", function (e) {
+//   e.preventDefault();
 
-  let services = document.querySelectorAll(
-    ".footer__form--checkboxes input:checked"
-  );
-  let servicesArray = [];
-  services.forEach((el) => {
-    servicesArray.push(el.value);
-  });
-  let message = `<b>ЗАМОВЛЕННЯ:</b>\n`,
-    name = this.querySelector("input[type='text']").value,
-    phone = this.querySelector("input[type='tel']").value;
-  text = this.querySelector("textarea").value;
-  message += `<b>Ім'я: </b>${name}\n`;
-  message += `<b>Номер телефону: </b>${phone}\n`;
-  message += `<b>Послуги: </b>${servicesArray}\n`;
-  message += `<b>Опис: </b>${text}\n`;
+//   let services = document.querySelectorAll(
+//     ".footer__form--checkboxes input:checked"
+//   );
+//   let servicesArray = [];
+//   services.forEach((el) => {
+//     servicesArray.push(el.value);
+//   });
+//   let message = `<b>ЗАМОВЛЕННЯ:</b>\n`,
+//     name = this.querySelector("input[type='text']").value,
+//     phone = this.querySelector("input[type='tel']").value;
+//   text = this.querySelector("textarea").value;
+//   message += `<b>Ім'я: </b>${name}\n`;
+//   message += `<b>Номер телефону: </b>${phone}\n`;
+//   message += `<b>Послуги: </b>${servicesArray}\n`;
+//   message += `<b>Опис: </b>${text}\n`;
 
-  if (name == "" || phone == "") {
-    console.log("err");
-  } else {
-    axios
-      .post(URI_API, {
-        chat_id: CHAT_ID,
-        parse_mode: "html",
-        text: message,
-      })
-      .then((res) => {
-        phone = "";
-      })
-      .catch((err) => {
-        console.warn(err);
-      })
-      .finally(() => {
-        name = "";
-        phone = "";
-        document.querySelector(".form-success").classList.add("show");
-        document.querySelector(".form").classList.add("hidden");
-      });
-    document.querySelector(".btn-back").addEventListener("click", function () {
-      document.querySelector(".form-success").classList.remove("show");
-      document.querySelector(".form").classList.remove("hidden");
-    });
-  }
-});
+//   if (name == "" || phone == "") {
+//     console.log("err");
+//   } else {
+//     axios
+//       .post(URI_API, {
+//         chat_id: CHAT_ID,
+//         parse_mode: "html",
+//         text: message,
+//       })
+//       .then((res) => {
+//         phone = "";
+//       })
+//       .catch((err) => {
+//         console.warn(err);
+//       })
+//       .finally(() => {
+//         name = "";
+//         phone = "";
+//         document.querySelector(".form-success").classList.add("show");
+//         document.querySelector(".form").classList.add("hidden");
+//       });
+//     document.querySelector(".btn-back").addEventListener("click", function () {
+//       document.querySelector(".form-success").classList.remove("show");
+//       document.querySelector(".form").classList.remove("hidden");
+//     });
+//   }
+// });

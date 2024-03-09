@@ -56,7 +56,7 @@
               include ../../images/arrow.svg
 
 
-          .item(data-type="tech")
+          form.item.tech(data-type="tech")
             .flex.jc-between
               .field
                 p Тип техніки
@@ -72,32 +72,32 @@
                   option Фото та відео
               .field
                 p Виробник, модель
-                input(type="text", name="")
+                input.require(type="text", name="model")
             .stars
               p Стан
               .stars__container
                 .rating
-                  input(type="radio" name="rating" id="rating-5")
-                  label(for="rating-5")
-                  input(type="radio" name="rating" id="rating-4")
-                  label(for="rating-4")
-                  input(type="radio" name="rating" id="rating-3")
-                  label(for="rating-3")
-                  input(type="radio" name="rating" id="rating-2")
-                  label(for="rating-2")
-                  input(type="radio" name="rating" id="rating-1")
-                  label(for="rating-1")
+                  input(type="radio" name="rating" id="tech-rating-5" value="5")
+                  label(for="tech-rating-5")
+                  input(type="radio" name="rating" id="tech-rating-4" value="4")
+                  label(for="tech-rating-4")
+                  input(type="radio" name="rating" id="tech-rating-3" value="3")
+                  label(for="tech-rating-3")
+                  input(type="radio" name="rating" id="tech-rating-2" value="2")
+                  label(for="tech-rating-2")
+                  input(type="radio" name="rating" id="tech-rating-1" value="1")
+                  label(for="tech-rating-1")
             .flex.jc-between
               .field 
                 p Ім'я
-                input(type="text", name="")
+                input.require(type="text", name="name")
               .field 
                 p Номер телефону
-                input(type="tel", name="")
-            a.calculate 
+                input#desktop-tech.require(name="phone" type="phone" placeholder="+38(099) 123 45 67" autocomplete="phone")
+            button(type="submit").calculate 
               p Розрахувати вартість онлайн
               include ../../images/arrow.svg
-          .item(data-type="hometech")
+          form.item.tech(data-type="hometech")
             .flex.jc-between
               .field
                 p Тип техніки
@@ -131,32 +131,32 @@
                   option Інше
               .field
                 p Виробник, модель
-                input(type="text", name="")
+                input.require(type="text", name="model")
             .stars
               p Стан
               .stars__container
                 .rating
-                  input(type="radio" name="rating" id="rating-55")
-                  label(for="rating-55")
-                  input(type="radio" name="rating" id="rating-44")
-                  label(for="rating-44")
-                  input(type="radio" name="rating" id="rating-33")
-                  label(for="rating-33")
-                  input(type="radio" name="rating" id="rating-22")
-                  label(for="rating-22")
-                  input(type="radio" name="rating" id="rating-11")
-                  label(for="rating-11")
+                  input(type="radio" name="rating" id="hometech-rating-5" value="5")
+                  label(for="hometech-rating-5")
+                  input(type="radio" name="rating" id="hometech-rating-4" value="4")
+                  label(for="hometech-rating-4")
+                  input(type="radio" name="rating" id="hometech-rating-3" value="3")
+                  label(for="hometech-rating-3")
+                  input(type="radio" name="rating" id="hometech-rating-2" value="2")
+                  label(for="hometech-rating-2")
+                  input(type="radio" name="rating" id="hometech-rating-1" value="1")
+                  label(for="hometech-rating-1")
             .flex.jc-between
               .field 
                 p Ім'я
-                input(type="text", name="")
+                input.require(type="text", name="name")
               .field 
                 p Номер телефону
-                input(type="tel", name="")
-            a.calculate 
+                input#desktop-hometech(name="phone" type="phone" placeholder="+38(099) 123 45 67" autocomplete="phone")
+            button(type="submit").calculate 
               p Розрахувати вартість онлайн
               include ../../images/arrow.svg
-          .item(data-type="tools")
+          form.item.tech(data-type="tools")
             .flex.jc-between
               .field
                 p Тип техніки
@@ -175,40 +175,40 @@
                   option Інше
               .field
                 p Виробник, модель
-                input(type="text", name="")
+                input.require(type="text", name="model")
             .stars
               p Стан
               .stars__container
                 .rating
-                  input(type="radio" name="rating" id="rating-555")
-                  label(for="rating-555")
-                  input(type="radio" name="rating" id="rating-444")
-                  label(for="rating-444")
-                  input(type="radio" name="rating" id="rating-333")
-                  label(for="rating-333")
-                  input(type="radio" name="rating" id="rating-222")
-                  label(for="rating-222")
-                  input(type="radio" name="rating" id="rating-111")
-                  label(for="rating-111")
+                  input(type="radio" name="rating" id="tools-rating-5" value="5")
+                  label(for="tools-rating-5")
+                  input(type="radio" name="rating" id="tools-rating-4" value="4")
+                  label(for="tools-rating-4")
+                  input(type="radio" name="rating" id="tools-rating-3" value="3")
+                  label(for="tools-rating-3")
+                  input(type="radio" name="rating" id="tools-rating-2" value="2")
+                  label(for="tools-rating-2")
+                  input(type="radio" name="rating" id="tools-rating-1" value="1")
+                  label(for="tools-rating-1")
             .flex.jc-between
               .field 
                 p Ім'я
-                input(type="text", name="")
+                input.require(type="text", name="name")
               .field 
                 p Номер телефону
-                input(type="tel", name="")
-            a.calculate 
+                input#desktop-tools(type="phone" name="phone" placeholder="+38(099) 123 45 67" autocomplete="phone")
+            button(type="submit").calculate 
               p Розрахувати вартість онлайн
               include ../../images/arrow.svg
           
-          .item(data-type="auto")
+          form.item.car(data-type="auto")
             .flex.jc-between
               .field
                 p Виробник
-                input(type="number", name="")
+                input.require(type="text", name="maker")
               .field
                 p Модель
-                input(type="number", name="")
+                input.require(type="text", name="model")
             .flex.jc-between
               .field
                 p Рік випуску
@@ -257,46 +257,51 @@
                   option 2021
                   option 2022
                   option 2023
+                  option 2024
               .field
                 p Пробіг авто
-                input(type="number", name="")
+                input.require(type="number", name="miles")
             .flex.jc-between
               .field 
                 p Ім'я
-                input(type="text", name="")
+                input.require(type="text", name="name")
               .field 
                 p Номер телефону
-                input(type="tel", name="")
-            a.calculate 
+                input#desktop-car.require(type="phone" name="phone" placeholder="+38(099) 123 45 67" autocomplete="phone")
+            button(type="submit").calculate 
               p Розрахувати вартість онлайн
               include ../../images/arrow.svg
-          .item(data-type="other")
+          form.item.other(data-type="other")
             .field.large
               p Назва моделі
-              input(type="number", name="")
+              input(type="text", name="model")
             
             .flex.jc-between
               .field 
                 p Ім'я
-                input(type="text", name="")
+                input(type="text", name="name")
               .field 
                 p Номер телефону
-                input(type="tel", name="")
-            a.calculate 
+                input#desktop-other(type="phone" name="phone" placeholder="+38(099) 123 45 67" autocomplete="phone")
+            button(type="submit").calculate 
               p Розрахувати вартість онлайн
               include ../../images/arrow.svg
     
     .mobile
-      .item.active
+      form.item.active
         a.item__head Золото
         .item__body
           .flex-md
             .field
               p Проба
-              select#gold_probe_m(data-placeholder="true", value="0")
-                option(value=1) 1
-                option(value=2) 2
-                option(value=3) 3
+              select#gold_probe_m
+                option(value=669.45) 375
+                option(value=922.60) 500
+                option(value=1102.81) 583
+                option(value=1106.91) 585
+                option(value=1428.90) 750
+                option(value=1732.68) 900
+                option(value=1850.14) 958
             .field
               p Вага, г
               input(type="number", name="")
@@ -304,20 +309,20 @@
             .total__descr 
               p Приблизна оцінка вартості виробу:
             .total__count 
-              p 2300
-          a.calculate.flex.ai-center.jc-center
+              p 
+          a.calculate.gold-calculate.flex.ai-center.jc-center
             p Розрахувати вартість онлайн
             include ../../images/arrow-white.svg
-      .item
+      form.item
         a.item__head Срібло
         .item__body
           .flex-md
             .field
               p Проба
               select#silver_probe_m(data-placeholder="true", value="0")
-                option(value=1) 1
-                option(value=2) 2
-                option(value=3) 3
+                option(value=12) 800
+                option(value=13) 875
+                option(value=16) 925
             .field
               p Вага, г
               input(type="number", name="")
@@ -325,13 +330,13 @@
             .total__descr 
               p Приблизна оцінка вартості виробу:
             .total__count 
-              p 2300
-          a.calculate.flex.ai-center.jc-center
+              p 
+          a.calculate.silver-calculate.flex.ai-center.jc-center
             p Розрахувати вартість онлайн
             include ../../images/arrow-white.svg
 
 
-      .item
+      form.item.tech
         a.item__head Техніка
         .item__body
           .field
@@ -348,36 +353,32 @@
               option Фото та відео
           .field
             p Виробник, модель
-            input(type="number", name="")
+            input.require(type="text", name="model")
           .stars
             p.stars__title Стан
             .stars__container
-              .star
-                include ../../images/star_m.svg
-                p 1
-              .star
-                include ../../images/star_m.svg
-                p 2
-              .star
-                include ../../images/star_m.svg
-                p 3
-              .star
-                include ../../images/star_m.svg
-                p 4
-              .star
-                include ../../images/star_m.svg
-                p 5
+              .rating
+                input(type="radio" name="rating" id="m-tech-rating-5" value="5")
+                label(for="m-tech-rating-5")
+                input(type="radio" name="rating" id="m-tech-rating-4" value="4")
+                label(for="m-tech-rating-4")
+                input(type="radio" name="rating" id="m-tech-rating-3" value="3")
+                label(for="m-tech-rating-3")
+                input(type="radio" name="rating" id="m-tech-rating-2" value="2")
+                label(for="m-tech-rating-2")
+                input(type="radio" name="rating" id="m-tech-rating-1" value="1")
+                label(for="m-tech-rating-1")
 
             .field 
               p Ім'я
-              input(type="text", name="")
+              input.require(type="text", name="name")
             .field 
               p Номер телефону
-              input(type="tel", name="")
-            a.calculate.flex.ai-center.jc-center
+              input#m-desktop-tech.require(name="phone" type="phone" placeholder="+38(099) 123 45 67" autocomplete="phone")
+            button(type="submit").calculate.flex.ai-center.jc-center
               p Розрахувати вартість онлайн
               include ../../images/arrow-white.svg
-      .item
+      form.item.tech
         a.item__head Побутова техніка
         .item__body
           .field
@@ -412,36 +413,32 @@
               option Інше
           .field
             p Виробник, модель
-            input(type="text", name="")
+            input.require(type="text", name="model")
           .stars
             p.stars__title Стан
             .stars__container
-              .star
-                include ../../images/star_m.svg
-                p 1
-              .star
-                include ../../images/star_m.svg
-                p 2
-              .star
-                include ../../images/star_m.svg
-                p 3
-              .star
-                include ../../images/star_m.svg
-                p 4
-              .star
-                include ../../images/star_m.svg
-                p 5
+              .rating
+                input(type="radio" name="rating" id="m-hometech-rating-5" value="5")
+                label(for="m-hometech-rating-5")
+                input(type="radio" name="rating" id="m-hometech-rating-4" value="4")
+                label(for="m-hometech-rating-4")
+                input(type="radio" name="rating" id="m-hometech-rating-3" value="3")
+                label(for="m-hometech-rating-3")
+                input(type="radio" name="rating" id="m-hometech-rating-2" value="2")
+                label(for="m-hometech-rating-2")
+                input(type="radio" name="rating" id="m-hometech-rating-1" value="1")
+                label(for="m-hometech-rating-1")
 
             .field 
               p Ім'я
-              input(type="text", name="")
+              input.require(type="text", name="name")
             .field 
               p Номер телефону
-              input(type="tel", name="")
-            a.calculate.flex.ai-center.jc-center
+              input#m-desktop-hometech(name="phone" type="phone" placeholder="+38(099) 123 45 67" autocomplete="phone")
+            button(type="submit").calculate.flex.ai-center.jc-center
               p Розрахувати вартість онлайн
               include ../../images/arrow-white.svg
-      .item
+      form.item.tech
         a.item__head Будівельні інструменти
         .item__body
           .field
@@ -461,46 +458,40 @@
               option Інше
           .field
             p Виробник, модель
-            input(type="text", name="")
+            input.require(type="text", name="model")
           .stars
             p.stars__title Стан
             .stars__container
-              .star
-                include ../../images/star_m.svg
-                p 1
-              .star
-                include ../../images/star_m.svg
-                p 2
-              .star
-                include ../../images/star_m.svg
-                p 3
-              .star
-                include ../../images/star_m.svg
-                p 4
-              .star
-                include ../../images/star_m.svg
-                p 5
-
+              .rating
+                input(type="radio" name="rating" id="m-tools-rating-5" value="5")
+                label(for="m-tools-rating-5")
+                input(type="radio" name="rating" id="m-tools-rating-4" value="4")
+                label(for="m-tools-rating-4")
+                input(type="radio" name="rating" id="m-tools-rating-3" value="3")
+                label(for="m-tools-rating-3")
+                input(type="radio" name="rating" id="m-tools-rating-2" value="2")
+                label(for="m-tools-rating-2")
+                input(type="radio" name="rating" id="m-tools-rating-1" value="1")
+                label(for="m-tools-rating-1")
             .field 
               p Ім'я
-              input(type="text", name="")
+              input.require(type="text", name="name")
             .field 
               p Номер телефону
-              input(type="tel", name="")
-            a.calculate.flex.ai-center.jc-center
+              input#m-desktop-tools(type="phone" name="phone" placeholder="+38(099) 123 45 67" autocomplete="phone")
+            button(type="submit").calculate.flex.ai-center.jc-center
               p Розрахувати вартість онлайн
               include ../../images/arrow-white.svg
 
-
-      .item
+      form.item.car
         a.item__head Авто
         .item__body
           .field
             p Виробник
-            input(type="text", name="")
+            input.require(type="text", name="maker")
           .field
             p Модель
-            input(type="text", name="")
+            input.require(type="text", name="model")
           .field
             p Рік випуску
             select#auto_type_m(data-placeholder="true", value="0")
@@ -550,29 +541,28 @@
               option 2023
           .field
             p Пробіг авто
-            input(type="number", name="")
+            input.require(type="number", name="miles")
           .field 
             p Ім'я
-            input(type="text", name="")
+            input.require(type="text", name="name")
           .field 
             p Номер телефону
-            input(type="tel", name="")
-          a.calculate.flex.ai-center.jc-center
+            input#m-desktop-car.require(type="phone" name="phone" placeholder="+38(099) 123 45 67" autocomplete="phone")
+          button(type="submit").calculate.flex.ai-center.jc-center
             p Розрахувати вартість онлайн
             include ../../images/arrow-white.svg
-
-      .item
+      form.item.other
         a.item__head Інше
         .item__body
           .field
             p Назва моделі
-            input(type="number", name="")
+            input(type="text", name="model")
           .field 
             p Ім'я
-            input(type="text", name="")
+            input(type="text", name="name")
           .field 
             p Номер телефону
-            input(type="tel", name="")
-          a.calculate.flex.ai-center.jc-center
+            input#m-desktop-other(type="phone" name="phone" placeholder="+38(099) 123 45 67" autocomplete="phone")
+          button(type="submit").calculate.flex.ai-center.jc-center
             p Розрахувати вартість онлайн
             include ../../images/arrow-white.svg

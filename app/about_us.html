@@ -488,7 +488,7 @@
 </svg>
 </a>
               </div>
-              <div class="item" data-type="tech">
+              <form class="item tech" data-type="tech">
                 <div class="flex jc-between">
                   <div class="field">
                     <p>Тип техніки</p>
@@ -506,42 +506,44 @@
                   </div>
                   <div class="field">
                     <p>Виробник, модель</p>
-                    <input type="text" name=""/>
+                    <input class="require" type="text" name="model"/>
                   </div>
                 </div>
                 <div class="stars">
                   <p>Стан</p>
                   <div class="stars__container">
                     <div class="rating">
-                      <input type="radio" name="rating" id="rating-5"/>
-                      <label for="rating-5"></label>
-                      <input type="radio" name="rating" id="rating-4"/>
-                      <label for="rating-4"></label>
-                      <input type="radio" name="rating" id="rating-3"/>
-                      <label for="rating-3"></label>
-                      <input type="radio" name="rating" id="rating-2"/>
-                      <label for="rating-2"></label>
-                      <input type="radio" name="rating" id="rating-1"/>
-                      <label for="rating-1"></label>
+                      <input type="radio" name="rating" id="tech-rating-5" value="5"/>
+                      <label for="tech-rating-5"></label>
+                      <input type="radio" name="rating" id="tech-rating-4" value="4"/>
+                      <label for="tech-rating-4"></label>
+                      <input type="radio" name="rating" id="tech-rating-3" value="3"/>
+                      <label for="tech-rating-3"></label>
+                      <input type="radio" name="rating" id="tech-rating-2" value="2"/>
+                      <label for="tech-rating-2"></label>
+                      <input type="radio" name="rating" id="tech-rating-1" value="1"/>
+                      <label for="tech-rating-1"></label>
                     </div>
                   </div>
                 </div>
                 <div class="flex jc-between">
                   <div class="field"> 
                     <p>Ім'я</p>
-                    <input type="text" name=""/>
+                    <input class="require" type="text" name="name"/>
                   </div>
                   <div class="field"> 
                     <p>Номер телефону</p>
-                    <input type="tel" name=""/>
+                    <input class="require" id="desktop-tech" name="phone" type="phone" placeholder="+38(099) 123 45 67" autocomplete="phone"/>
                   </div>
-                </div><a class="calculate"> 
+                </div>
+                <button class="calculate" type="submit"> 
                   <p>Розрахувати вартість онлайн</p><svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M9.84113 3.35201L7.50513 1.03201L8.24113 0.312012L11.7611 3.86401L8.24113 7.40001L7.50513 6.68001L9.84113 4.36001L0.609131 4.37601V3.35201H9.84113Z" fill="black"/>
 </svg>
-</a>
-              </div>
-              <div class="item" data-type="hometech">
+
+                </button>
+              </form>
+              <form class="item tech" data-type="hometech">
                 <div class="flex jc-between">
                   <div class="field">
                     <p>Тип техніки</p>
@@ -577,42 +579,44 @@
                   </div>
                   <div class="field">
                     <p>Виробник, модель</p>
-                    <input type="text" name=""/>
+                    <input class="require" type="text" name="model"/>
                   </div>
                 </div>
                 <div class="stars">
                   <p>Стан</p>
                   <div class="stars__container">
                     <div class="rating">
-                      <input type="radio" name="rating" id="rating-55"/>
-                      <label for="rating-55"></label>
-                      <input type="radio" name="rating" id="rating-44"/>
-                      <label for="rating-44"></label>
-                      <input type="radio" name="rating" id="rating-33"/>
-                      <label for="rating-33"></label>
-                      <input type="radio" name="rating" id="rating-22"/>
-                      <label for="rating-22"></label>
-                      <input type="radio" name="rating" id="rating-11"/>
-                      <label for="rating-11"></label>
+                      <input type="radio" name="rating" id="hometech-rating-5" value="5"/>
+                      <label for="hometech-rating-5"></label>
+                      <input type="radio" name="rating" id="hometech-rating-4" value="4"/>
+                      <label for="hometech-rating-4"></label>
+                      <input type="radio" name="rating" id="hometech-rating-3" value="3"/>
+                      <label for="hometech-rating-3"></label>
+                      <input type="radio" name="rating" id="hometech-rating-2" value="2"/>
+                      <label for="hometech-rating-2"></label>
+                      <input type="radio" name="rating" id="hometech-rating-1" value="1"/>
+                      <label for="hometech-rating-1"></label>
                     </div>
                   </div>
                 </div>
                 <div class="flex jc-between">
                   <div class="field"> 
                     <p>Ім'я</p>
-                    <input type="text" name=""/>
+                    <input class="require" type="text" name="name"/>
                   </div>
                   <div class="field"> 
                     <p>Номер телефону</p>
-                    <input type="tel" name=""/>
+                    <input id="desktop-hometech" name="phone" type="phone" placeholder="+38(099) 123 45 67" autocomplete="phone"/>
                   </div>
-                </div><a class="calculate"> 
+                </div>
+                <button class="calculate" type="submit"> 
                   <p>Розрахувати вартість онлайн</p><svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M9.84113 3.35201L7.50513 1.03201L8.24113 0.312012L11.7611 3.86401L8.24113 7.40001L7.50513 6.68001L9.84113 4.36001L0.609131 4.37601V3.35201H9.84113Z" fill="black"/>
 </svg>
-</a>
-              </div>
-              <div class="item" data-type="tools">
+
+                </button>
+              </form>
+              <form class="item tech" data-type="tools">
                 <div class="flex jc-between">
                   <div class="field">
                     <p>Тип техніки</p>
@@ -633,50 +637,52 @@
                   </div>
                   <div class="field">
                     <p>Виробник, модель</p>
-                    <input type="text" name=""/>
+                    <input class="require" type="text" name="model"/>
                   </div>
                 </div>
                 <div class="stars">
                   <p>Стан</p>
                   <div class="stars__container">
                     <div class="rating">
-                      <input type="radio" name="rating" id="rating-555"/>
-                      <label for="rating-555"></label>
-                      <input type="radio" name="rating" id="rating-444"/>
-                      <label for="rating-444"></label>
-                      <input type="radio" name="rating" id="rating-333"/>
-                      <label for="rating-333"></label>
-                      <input type="radio" name="rating" id="rating-222"/>
-                      <label for="rating-222"></label>
-                      <input type="radio" name="rating" id="rating-111"/>
-                      <label for="rating-111"></label>
+                      <input type="radio" name="rating" id="tools-rating-5" value="5"/>
+                      <label for="tools-rating-5"></label>
+                      <input type="radio" name="rating" id="tools-rating-4" value="4"/>
+                      <label for="tools-rating-4"></label>
+                      <input type="radio" name="rating" id="tools-rating-3" value="3"/>
+                      <label for="tools-rating-3"></label>
+                      <input type="radio" name="rating" id="tools-rating-2" value="2"/>
+                      <label for="tools-rating-2"></label>
+                      <input type="radio" name="rating" id="tools-rating-1" value="1"/>
+                      <label for="tools-rating-1"></label>
                     </div>
                   </div>
                 </div>
                 <div class="flex jc-between">
                   <div class="field"> 
                     <p>Ім'я</p>
-                    <input type="text" name=""/>
+                    <input class="require" type="text" name="name"/>
                   </div>
                   <div class="field"> 
                     <p>Номер телефону</p>
-                    <input type="tel" name=""/>
+                    <input id="desktop-tools" type="phone" name="phone" placeholder="+38(099) 123 45 67" autocomplete="phone"/>
                   </div>
-                </div><a class="calculate"> 
+                </div>
+                <button class="calculate" type="submit"> 
                   <p>Розрахувати вартість онлайн</p><svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M9.84113 3.35201L7.50513 1.03201L8.24113 0.312012L11.7611 3.86401L8.24113 7.40001L7.50513 6.68001L9.84113 4.36001L0.609131 4.37601V3.35201H9.84113Z" fill="black"/>
 </svg>
-</a>
-              </div>
-              <div class="item" data-type="auto">
+
+                </button>
+              </form>
+              <form class="item car" data-type="auto">
                 <div class="flex jc-between">
                   <div class="field">
                     <p>Виробник</p>
-                    <input type="number" name=""/>
+                    <input class="require" type="text" name="maker"/>
                   </div>
                   <div class="field">
                     <p>Модель</p>
-                    <input type="number" name=""/>
+                    <input class="require" type="text" name="model"/>
                   </div>
                 </div>
                 <div class="flex jc-between">
@@ -727,61 +733,70 @@
                       <option>2021</option>
                       <option>2022</option>
                       <option>2023</option>
+                      <option>2024</option>
                     </select>
                   </div>
                   <div class="field">
                     <p>Пробіг авто</p>
-                    <input type="number" name=""/>
+                    <input class="require" type="number" name="miles"/>
                   </div>
                 </div>
                 <div class="flex jc-between">
                   <div class="field"> 
                     <p>Ім'я</p>
-                    <input type="text" name=""/>
+                    <input class="require" type="text" name="name"/>
                   </div>
                   <div class="field"> 
                     <p>Номер телефону</p>
-                    <input type="tel" name=""/>
+                    <input class="require" id="desktop-car" type="phone" name="phone" placeholder="+38(099) 123 45 67" autocomplete="phone"/>
                   </div>
-                </div><a class="calculate"> 
+                </div>
+                <button class="calculate" type="submit"> 
                   <p>Розрахувати вартість онлайн</p><svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M9.84113 3.35201L7.50513 1.03201L8.24113 0.312012L11.7611 3.86401L8.24113 7.40001L7.50513 6.68001L9.84113 4.36001L0.609131 4.37601V3.35201H9.84113Z" fill="black"/>
 </svg>
-</a>
-              </div>
-              <div class="item" data-type="other">
+
+                </button>
+              </form>
+              <form class="item other" data-type="other">
                 <div class="field large">
                   <p>Назва моделі</p>
-                  <input type="number" name=""/>
+                  <input type="text" name="model"/>
                 </div>
                 <div class="flex jc-between">
                   <div class="field"> 
                     <p>Ім'я</p>
-                    <input type="text" name=""/>
+                    <input type="text" name="name"/>
                   </div>
                   <div class="field"> 
                     <p>Номер телефону</p>
-                    <input type="tel" name=""/>
+                    <input id="desktop-other" type="phone" name="phone" placeholder="+38(099) 123 45 67" autocomplete="phone"/>
                   </div>
-                </div><a class="calculate"> 
+                </div>
+                <button class="calculate" type="submit"> 
                   <p>Розрахувати вартість онлайн</p><svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M9.84113 3.35201L7.50513 1.03201L8.24113 0.312012L11.7611 3.86401L8.24113 7.40001L7.50513 6.68001L9.84113 4.36001L0.609131 4.37601V3.35201H9.84113Z" fill="black"/>
 </svg>
-</a>
-              </div>
+
+                </button>
+              </form>
             </div>
           </div>
         </div>
         <div class="mobile">
-          <div class="item active"><a class="item__head">Золото</a>
+          <form class="item active"><a class="item__head">Золото</a>
             <div class="item__body">
               <div class="flex-md">
                 <div class="field">
                   <p>Проба</p>
-                  <select id="gold_probe_m" data-placeholder="true" value="0">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
+                  <select id="gold_probe_m">
+                    <option value="669.45">375</option>
+                    <option value="922.6">500</option>
+                    <option value="1102.81">583</option>
+                    <option value="1106.91">585</option>
+                    <option value="1428.9">750</option>
+                    <option value="1732.68">900</option>
+                    <option value="1850.14">958</option>
                   </select>
                 </div>
                 <div class="field">
@@ -794,24 +809,24 @@
                   <p>Приблизна оцінка вартості виробу:</p>
                 </div>
                 <div class="total__count"> 
-                  <p>2300</p>
+                  <p> </p>
                 </div>
-              </div><a class="calculate flex ai-center jc-center">
+              </div><a class="calculate gold-calculate flex ai-center jc-center">
                 <p>Розрахувати вартість онлайн</p><svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M9.84113 3.35201L7.50513 1.03201L8.24113 0.312012L11.7611 3.86401L8.24113 7.40001L7.50513 6.68001L9.84113 4.36001L0.609131 4.37601V3.35201H9.84113Z" fill="white"/>
 </svg>
 </a>
             </div>
-          </div>
-          <div class="item"><a class="item__head">Срібло</a>
+          </form>
+          <form class="item"><a class="item__head">Срібло</a>
             <div class="item__body">
               <div class="flex-md">
                 <div class="field">
                   <p>Проба</p>
                   <select id="silver_probe_m" data-placeholder="true" value="0">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
+                    <option value="12">800</option>
+                    <option value="13">875</option>
+                    <option value="16">925</option>
                   </select>
                 </div>
                 <div class="field">
@@ -824,16 +839,16 @@
                   <p>Приблизна оцінка вартості виробу:</p>
                 </div>
                 <div class="total__count"> 
-                  <p>2300</p>
+                  <p> </p>
                 </div>
-              </div><a class="calculate flex ai-center jc-center">
+              </div><a class="calculate silver-calculate flex ai-center jc-center">
                 <p>Розрахувати вартість онлайн</p><svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M9.84113 3.35201L7.50513 1.03201L8.24113 0.312012L11.7611 3.86401L8.24113 7.40001L7.50513 6.68001L9.84113 4.36001L0.609131 4.37601V3.35201H9.84113Z" fill="white"/>
 </svg>
 </a>
             </div>
-          </div>
-          <div class="item"><a class="item__head">Техніка</a>
+          </form>
+          <form class="item tech"><a class="item__head">Техніка</a>
             <div class="item__body">
               <div class="field">
                 <p>Тип техніки</p>
@@ -851,63 +866,42 @@
               </div>
               <div class="field">
                 <p>Виробник, модель</p>
-                <input type="number" name=""/>
+                <input class="require" type="text" name="model"/>
               </div>
               <div class="stars">
                 <p class="stars__title">Стан</p>
                 <div class="stars__container">
-                  <div class="star"><svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M18.0245 1.08156C18.1741 0.620906 18.8259 0.620902 18.9755 1.08156L22.627 12.3197C22.8278 12.9377 23.4038 13.3561 24.0536 13.3561H35.87C36.3544 13.3561 36.5558 13.9759 36.1639 14.2606L26.6042 21.2062C26.0785 21.5881 25.8585 22.2652 26.0593 22.8832L29.7108 34.1213C29.8605 34.582 29.3332 34.965 28.9414 34.6803L19.3817 27.7348C18.8559 27.3528 18.1441 27.3528 17.6183 27.7348L8.05862 34.6803C7.66677 34.965 7.13953 34.582 7.2892 34.1213L10.9407 22.8832C11.1415 22.2652 10.9215 21.5881 10.3958 21.2062L0.836075 14.2606C0.444217 13.9759 0.645606 13.3561 1.12997 13.3561H12.9464C13.5962 13.3561 14.1722 12.9377 14.373 12.3197L18.0245 1.08156Z" stroke="
-#F10A01"/>
-</svg>
-
-                    <p>1</p>
-                  </div>
-                  <div class="star"><svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M18.0245 1.08156C18.1741 0.620906 18.8259 0.620902 18.9755 1.08156L22.627 12.3197C22.8278 12.9377 23.4038 13.3561 24.0536 13.3561H35.87C36.3544 13.3561 36.5558 13.9759 36.1639 14.2606L26.6042 21.2062C26.0785 21.5881 25.8585 22.2652 26.0593 22.8832L29.7108 34.1213C29.8605 34.582 29.3332 34.965 28.9414 34.6803L19.3817 27.7348C18.8559 27.3528 18.1441 27.3528 17.6183 27.7348L8.05862 34.6803C7.66677 34.965 7.13953 34.582 7.2892 34.1213L10.9407 22.8832C11.1415 22.2652 10.9215 21.5881 10.3958 21.2062L0.836075 14.2606C0.444217 13.9759 0.645606 13.3561 1.12997 13.3561H12.9464C13.5962 13.3561 14.1722 12.9377 14.373 12.3197L18.0245 1.08156Z" stroke="
-#F10A01"/>
-</svg>
-
-                    <p>2</p>
-                  </div>
-                  <div class="star"><svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M18.0245 1.08156C18.1741 0.620906 18.8259 0.620902 18.9755 1.08156L22.627 12.3197C22.8278 12.9377 23.4038 13.3561 24.0536 13.3561H35.87C36.3544 13.3561 36.5558 13.9759 36.1639 14.2606L26.6042 21.2062C26.0785 21.5881 25.8585 22.2652 26.0593 22.8832L29.7108 34.1213C29.8605 34.582 29.3332 34.965 28.9414 34.6803L19.3817 27.7348C18.8559 27.3528 18.1441 27.3528 17.6183 27.7348L8.05862 34.6803C7.66677 34.965 7.13953 34.582 7.2892 34.1213L10.9407 22.8832C11.1415 22.2652 10.9215 21.5881 10.3958 21.2062L0.836075 14.2606C0.444217 13.9759 0.645606 13.3561 1.12997 13.3561H12.9464C13.5962 13.3561 14.1722 12.9377 14.373 12.3197L18.0245 1.08156Z" stroke="
-#F10A01"/>
-</svg>
-
-                    <p>3</p>
-                  </div>
-                  <div class="star"><svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M18.0245 1.08156C18.1741 0.620906 18.8259 0.620902 18.9755 1.08156L22.627 12.3197C22.8278 12.9377 23.4038 13.3561 24.0536 13.3561H35.87C36.3544 13.3561 36.5558 13.9759 36.1639 14.2606L26.6042 21.2062C26.0785 21.5881 25.8585 22.2652 26.0593 22.8832L29.7108 34.1213C29.8605 34.582 29.3332 34.965 28.9414 34.6803L19.3817 27.7348C18.8559 27.3528 18.1441 27.3528 17.6183 27.7348L8.05862 34.6803C7.66677 34.965 7.13953 34.582 7.2892 34.1213L10.9407 22.8832C11.1415 22.2652 10.9215 21.5881 10.3958 21.2062L0.836075 14.2606C0.444217 13.9759 0.645606 13.3561 1.12997 13.3561H12.9464C13.5962 13.3561 14.1722 12.9377 14.373 12.3197L18.0245 1.08156Z" stroke="
-#F10A01"/>
-</svg>
-
-                    <p>4</p>
-                  </div>
-                  <div class="star"><svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M18.0245 1.08156C18.1741 0.620906 18.8259 0.620902 18.9755 1.08156L22.627 12.3197C22.8278 12.9377 23.4038 13.3561 24.0536 13.3561H35.87C36.3544 13.3561 36.5558 13.9759 36.1639 14.2606L26.6042 21.2062C26.0785 21.5881 25.8585 22.2652 26.0593 22.8832L29.7108 34.1213C29.8605 34.582 29.3332 34.965 28.9414 34.6803L19.3817 27.7348C18.8559 27.3528 18.1441 27.3528 17.6183 27.7348L8.05862 34.6803C7.66677 34.965 7.13953 34.582 7.2892 34.1213L10.9407 22.8832C11.1415 22.2652 10.9215 21.5881 10.3958 21.2062L0.836075 14.2606C0.444217 13.9759 0.645606 13.3561 1.12997 13.3561H12.9464C13.5962 13.3561 14.1722 12.9377 14.373 12.3197L18.0245 1.08156Z" stroke="
-#F10A01"/>
-</svg>
-
-                    <p>5</p>
+                  <div class="rating">
+                    <input type="radio" name="rating" id="m-tech-rating-5" value="5"/>
+                    <label for="m-tech-rating-5"></label>
+                    <input type="radio" name="rating" id="m-tech-rating-4" value="4"/>
+                    <label for="m-tech-rating-4"></label>
+                    <input type="radio" name="rating" id="m-tech-rating-3" value="3"/>
+                    <label for="m-tech-rating-3"></label>
+                    <input type="radio" name="rating" id="m-tech-rating-2" value="2"/>
+                    <label for="m-tech-rating-2"></label>
+                    <input type="radio" name="rating" id="m-tech-rating-1" value="1"/>
+                    <label for="m-tech-rating-1"></label>
                   </div>
                 </div>
                 <div class="field"> 
                   <p>Ім'я</p>
-                  <input type="text" name=""/>
+                  <input class="require" type="text" name="name"/>
                 </div>
                 <div class="field"> 
                   <p>Номер телефону</p>
-                  <input type="tel" name=""/>
-                </div><a class="calculate flex ai-center jc-center">
+                  <input class="require" id="m-desktop-tech" name="phone" type="phone" placeholder="+38(099) 123 45 67" autocomplete="phone"/>
+                </div>
+                <button class="calculate flex ai-center jc-center" type="submit">
                   <p>Розрахувати вартість онлайн</p><svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M9.84113 3.35201L7.50513 1.03201L8.24113 0.312012L11.7611 3.86401L8.24113 7.40001L7.50513 6.68001L9.84113 4.36001L0.609131 4.37601V3.35201H9.84113Z" fill="white"/>
 </svg>
-</a>
+
+                </button>
               </div>
             </div>
-          </div>
-          <div class="item"><a class="item__head">Побутова техніка</a>
+          </form>
+          <form class="item tech"><a class="item__head">Побутова техніка</a>
             <div class="item__body">
               <div class="field">
                 <p>Тип техніки</p>
@@ -943,63 +937,42 @@
               </div>
               <div class="field">
                 <p>Виробник, модель</p>
-                <input type="text" name=""/>
+                <input class="require" type="text" name="model"/>
               </div>
               <div class="stars">
                 <p class="stars__title">Стан</p>
                 <div class="stars__container">
-                  <div class="star"><svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M18.0245 1.08156C18.1741 0.620906 18.8259 0.620902 18.9755 1.08156L22.627 12.3197C22.8278 12.9377 23.4038 13.3561 24.0536 13.3561H35.87C36.3544 13.3561 36.5558 13.9759 36.1639 14.2606L26.6042 21.2062C26.0785 21.5881 25.8585 22.2652 26.0593 22.8832L29.7108 34.1213C29.8605 34.582 29.3332 34.965 28.9414 34.6803L19.3817 27.7348C18.8559 27.3528 18.1441 27.3528 17.6183 27.7348L8.05862 34.6803C7.66677 34.965 7.13953 34.582 7.2892 34.1213L10.9407 22.8832C11.1415 22.2652 10.9215 21.5881 10.3958 21.2062L0.836075 14.2606C0.444217 13.9759 0.645606 13.3561 1.12997 13.3561H12.9464C13.5962 13.3561 14.1722 12.9377 14.373 12.3197L18.0245 1.08156Z" stroke="
-#F10A01"/>
-</svg>
-
-                    <p>1</p>
-                  </div>
-                  <div class="star"><svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M18.0245 1.08156C18.1741 0.620906 18.8259 0.620902 18.9755 1.08156L22.627 12.3197C22.8278 12.9377 23.4038 13.3561 24.0536 13.3561H35.87C36.3544 13.3561 36.5558 13.9759 36.1639 14.2606L26.6042 21.2062C26.0785 21.5881 25.8585 22.2652 26.0593 22.8832L29.7108 34.1213C29.8605 34.582 29.3332 34.965 28.9414 34.6803L19.3817 27.7348C18.8559 27.3528 18.1441 27.3528 17.6183 27.7348L8.05862 34.6803C7.66677 34.965 7.13953 34.582 7.2892 34.1213L10.9407 22.8832C11.1415 22.2652 10.9215 21.5881 10.3958 21.2062L0.836075 14.2606C0.444217 13.9759 0.645606 13.3561 1.12997 13.3561H12.9464C13.5962 13.3561 14.1722 12.9377 14.373 12.3197L18.0245 1.08156Z" stroke="
-#F10A01"/>
-</svg>
-
-                    <p>2</p>
-                  </div>
-                  <div class="star"><svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M18.0245 1.08156C18.1741 0.620906 18.8259 0.620902 18.9755 1.08156L22.627 12.3197C22.8278 12.9377 23.4038 13.3561 24.0536 13.3561H35.87C36.3544 13.3561 36.5558 13.9759 36.1639 14.2606L26.6042 21.2062C26.0785 21.5881 25.8585 22.2652 26.0593 22.8832L29.7108 34.1213C29.8605 34.582 29.3332 34.965 28.9414 34.6803L19.3817 27.7348C18.8559 27.3528 18.1441 27.3528 17.6183 27.7348L8.05862 34.6803C7.66677 34.965 7.13953 34.582 7.2892 34.1213L10.9407 22.8832C11.1415 22.2652 10.9215 21.5881 10.3958 21.2062L0.836075 14.2606C0.444217 13.9759 0.645606 13.3561 1.12997 13.3561H12.9464C13.5962 13.3561 14.1722 12.9377 14.373 12.3197L18.0245 1.08156Z" stroke="
-#F10A01"/>
-</svg>
-
-                    <p>3</p>
-                  </div>
-                  <div class="star"><svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M18.0245 1.08156C18.1741 0.620906 18.8259 0.620902 18.9755 1.08156L22.627 12.3197C22.8278 12.9377 23.4038 13.3561 24.0536 13.3561H35.87C36.3544 13.3561 36.5558 13.9759 36.1639 14.2606L26.6042 21.2062C26.0785 21.5881 25.8585 22.2652 26.0593 22.8832L29.7108 34.1213C29.8605 34.582 29.3332 34.965 28.9414 34.6803L19.3817 27.7348C18.8559 27.3528 18.1441 27.3528 17.6183 27.7348L8.05862 34.6803C7.66677 34.965 7.13953 34.582 7.2892 34.1213L10.9407 22.8832C11.1415 22.2652 10.9215 21.5881 10.3958 21.2062L0.836075 14.2606C0.444217 13.9759 0.645606 13.3561 1.12997 13.3561H12.9464C13.5962 13.3561 14.1722 12.9377 14.373 12.3197L18.0245 1.08156Z" stroke="
-#F10A01"/>
-</svg>
-
-                    <p>4</p>
-                  </div>
-                  <div class="star"><svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M18.0245 1.08156C18.1741 0.620906 18.8259 0.620902 18.9755 1.08156L22.627 12.3197C22.8278 12.9377 23.4038 13.3561 24.0536 13.3561H35.87C36.3544 13.3561 36.5558 13.9759 36.1639 14.2606L26.6042 21.2062C26.0785 21.5881 25.8585 22.2652 26.0593 22.8832L29.7108 34.1213C29.8605 34.582 29.3332 34.965 28.9414 34.6803L19.3817 27.7348C18.8559 27.3528 18.1441 27.3528 17.6183 27.7348L8.05862 34.6803C7.66677 34.965 7.13953 34.582 7.2892 34.1213L10.9407 22.8832C11.1415 22.2652 10.9215 21.5881 10.3958 21.2062L0.836075 14.2606C0.444217 13.9759 0.645606 13.3561 1.12997 13.3561H12.9464C13.5962 13.3561 14.1722 12.9377 14.373 12.3197L18.0245 1.08156Z" stroke="
-#F10A01"/>
-</svg>
-
-                    <p>5</p>
+                  <div class="rating">
+                    <input type="radio" name="rating" id="m-hometech-rating-5" value="5"/>
+                    <label for="m-hometech-rating-5"></label>
+                    <input type="radio" name="rating" id="m-hometech-rating-4" value="4"/>
+                    <label for="m-hometech-rating-4"></label>
+                    <input type="radio" name="rating" id="m-hometech-rating-3" value="3"/>
+                    <label for="m-hometech-rating-3"></label>
+                    <input type="radio" name="rating" id="m-hometech-rating-2" value="2"/>
+                    <label for="m-hometech-rating-2"></label>
+                    <input type="radio" name="rating" id="m-hometech-rating-1" value="1"/>
+                    <label for="m-hometech-rating-1"></label>
                   </div>
                 </div>
                 <div class="field"> 
                   <p>Ім'я</p>
-                  <input type="text" name=""/>
+                  <input class="require" type="text" name="name"/>
                 </div>
                 <div class="field"> 
                   <p>Номер телефону</p>
-                  <input type="tel" name=""/>
-                </div><a class="calculate flex ai-center jc-center">
+                  <input id="m-desktop-hometech" name="phone" type="phone" placeholder="+38(099) 123 45 67" autocomplete="phone"/>
+                </div>
+                <button class="calculate flex ai-center jc-center" type="submit">
                   <p>Розрахувати вартість онлайн</p><svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M9.84113 3.35201L7.50513 1.03201L8.24113 0.312012L11.7611 3.86401L8.24113 7.40001L7.50513 6.68001L9.84113 4.36001L0.609131 4.37601V3.35201H9.84113Z" fill="white"/>
 </svg>
-</a>
+
+                </button>
               </div>
             </div>
-          </div>
-          <div class="item"><a class="item__head">Будівельні інструменти</a>
+          </form>
+          <form class="item tech"><a class="item__head">Будівельні інструменти</a>
             <div class="item__body">
               <div class="field">
                 <p>Тип техніки</p>
@@ -1020,71 +993,50 @@
               </div>
               <div class="field">
                 <p>Виробник, модель</p>
-                <input type="text" name=""/>
+                <input class="require" type="text" name="model"/>
               </div>
               <div class="stars">
                 <p class="stars__title">Стан</p>
                 <div class="stars__container">
-                  <div class="star"><svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M18.0245 1.08156C18.1741 0.620906 18.8259 0.620902 18.9755 1.08156L22.627 12.3197C22.8278 12.9377 23.4038 13.3561 24.0536 13.3561H35.87C36.3544 13.3561 36.5558 13.9759 36.1639 14.2606L26.6042 21.2062C26.0785 21.5881 25.8585 22.2652 26.0593 22.8832L29.7108 34.1213C29.8605 34.582 29.3332 34.965 28.9414 34.6803L19.3817 27.7348C18.8559 27.3528 18.1441 27.3528 17.6183 27.7348L8.05862 34.6803C7.66677 34.965 7.13953 34.582 7.2892 34.1213L10.9407 22.8832C11.1415 22.2652 10.9215 21.5881 10.3958 21.2062L0.836075 14.2606C0.444217 13.9759 0.645606 13.3561 1.12997 13.3561H12.9464C13.5962 13.3561 14.1722 12.9377 14.373 12.3197L18.0245 1.08156Z" stroke="
-#F10A01"/>
-</svg>
-
-                    <p>1</p>
-                  </div>
-                  <div class="star"><svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M18.0245 1.08156C18.1741 0.620906 18.8259 0.620902 18.9755 1.08156L22.627 12.3197C22.8278 12.9377 23.4038 13.3561 24.0536 13.3561H35.87C36.3544 13.3561 36.5558 13.9759 36.1639 14.2606L26.6042 21.2062C26.0785 21.5881 25.8585 22.2652 26.0593 22.8832L29.7108 34.1213C29.8605 34.582 29.3332 34.965 28.9414 34.6803L19.3817 27.7348C18.8559 27.3528 18.1441 27.3528 17.6183 27.7348L8.05862 34.6803C7.66677 34.965 7.13953 34.582 7.2892 34.1213L10.9407 22.8832C11.1415 22.2652 10.9215 21.5881 10.3958 21.2062L0.836075 14.2606C0.444217 13.9759 0.645606 13.3561 1.12997 13.3561H12.9464C13.5962 13.3561 14.1722 12.9377 14.373 12.3197L18.0245 1.08156Z" stroke="
-#F10A01"/>
-</svg>
-
-                    <p>2</p>
-                  </div>
-                  <div class="star"><svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M18.0245 1.08156C18.1741 0.620906 18.8259 0.620902 18.9755 1.08156L22.627 12.3197C22.8278 12.9377 23.4038 13.3561 24.0536 13.3561H35.87C36.3544 13.3561 36.5558 13.9759 36.1639 14.2606L26.6042 21.2062C26.0785 21.5881 25.8585 22.2652 26.0593 22.8832L29.7108 34.1213C29.8605 34.582 29.3332 34.965 28.9414 34.6803L19.3817 27.7348C18.8559 27.3528 18.1441 27.3528 17.6183 27.7348L8.05862 34.6803C7.66677 34.965 7.13953 34.582 7.2892 34.1213L10.9407 22.8832C11.1415 22.2652 10.9215 21.5881 10.3958 21.2062L0.836075 14.2606C0.444217 13.9759 0.645606 13.3561 1.12997 13.3561H12.9464C13.5962 13.3561 14.1722 12.9377 14.373 12.3197L18.0245 1.08156Z" stroke="
-#F10A01"/>
-</svg>
-
-                    <p>3</p>
-                  </div>
-                  <div class="star"><svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M18.0245 1.08156C18.1741 0.620906 18.8259 0.620902 18.9755 1.08156L22.627 12.3197C22.8278 12.9377 23.4038 13.3561 24.0536 13.3561H35.87C36.3544 13.3561 36.5558 13.9759 36.1639 14.2606L26.6042 21.2062C26.0785 21.5881 25.8585 22.2652 26.0593 22.8832L29.7108 34.1213C29.8605 34.582 29.3332 34.965 28.9414 34.6803L19.3817 27.7348C18.8559 27.3528 18.1441 27.3528 17.6183 27.7348L8.05862 34.6803C7.66677 34.965 7.13953 34.582 7.2892 34.1213L10.9407 22.8832C11.1415 22.2652 10.9215 21.5881 10.3958 21.2062L0.836075 14.2606C0.444217 13.9759 0.645606 13.3561 1.12997 13.3561H12.9464C13.5962 13.3561 14.1722 12.9377 14.373 12.3197L18.0245 1.08156Z" stroke="
-#F10A01"/>
-</svg>
-
-                    <p>4</p>
-                  </div>
-                  <div class="star"><svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M18.0245 1.08156C18.1741 0.620906 18.8259 0.620902 18.9755 1.08156L22.627 12.3197C22.8278 12.9377 23.4038 13.3561 24.0536 13.3561H35.87C36.3544 13.3561 36.5558 13.9759 36.1639 14.2606L26.6042 21.2062C26.0785 21.5881 25.8585 22.2652 26.0593 22.8832L29.7108 34.1213C29.8605 34.582 29.3332 34.965 28.9414 34.6803L19.3817 27.7348C18.8559 27.3528 18.1441 27.3528 17.6183 27.7348L8.05862 34.6803C7.66677 34.965 7.13953 34.582 7.2892 34.1213L10.9407 22.8832C11.1415 22.2652 10.9215 21.5881 10.3958 21.2062L0.836075 14.2606C0.444217 13.9759 0.645606 13.3561 1.12997 13.3561H12.9464C13.5962 13.3561 14.1722 12.9377 14.373 12.3197L18.0245 1.08156Z" stroke="
-#F10A01"/>
-</svg>
-
-                    <p>5</p>
+                  <div class="rating">
+                    <input type="radio" name="rating" id="m-tools-rating-5" value="5"/>
+                    <label for="m-tools-rating-5"></label>
+                    <input type="radio" name="rating" id="m-tools-rating-4" value="4"/>
+                    <label for="m-tools-rating-4"></label>
+                    <input type="radio" name="rating" id="m-tools-rating-3" value="3"/>
+                    <label for="m-tools-rating-3"></label>
+                    <input type="radio" name="rating" id="m-tools-rating-2" value="2"/>
+                    <label for="m-tools-rating-2"></label>
+                    <input type="radio" name="rating" id="m-tools-rating-1" value="1"/>
+                    <label for="m-tools-rating-1"></label>
                   </div>
                 </div>
                 <div class="field"> 
                   <p>Ім'я</p>
-                  <input type="text" name=""/>
+                  <input class="require" type="text" name="name"/>
                 </div>
                 <div class="field"> 
                   <p>Номер телефону</p>
-                  <input type="tel" name=""/>
-                </div><a class="calculate flex ai-center jc-center">
+                  <input id="m-desktop-tools" type="phone" name="phone" placeholder="+38(099) 123 45 67" autocomplete="phone"/>
+                </div>
+                <button class="calculate flex ai-center jc-center" type="submit">
                   <p>Розрахувати вартість онлайн</p><svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M9.84113 3.35201L7.50513 1.03201L8.24113 0.312012L11.7611 3.86401L8.24113 7.40001L7.50513 6.68001L9.84113 4.36001L0.609131 4.37601V3.35201H9.84113Z" fill="white"/>
 </svg>
-</a>
+
+                </button>
               </div>
             </div>
-          </div>
-          <div class="item"><a class="item__head">Авто</a>
+          </form>
+          <form class="item car"><a class="item__head">Авто</a>
             <div class="item__body">
               <div class="field">
                 <p>Виробник</p>
-                <input type="text" name=""/>
+                <input class="require" type="text" name="maker"/>
               </div>
               <div class="field">
                 <p>Модель</p>
-                <input type="text" name=""/>
+                <input class="require" type="text" name="model"/>
               </div>
               <div class="field">
                 <p>Рік випуску</p>
@@ -1137,42 +1089,46 @@
               </div>
               <div class="field">
                 <p>Пробіг авто</p>
-                <input type="number" name=""/>
+                <input class="require" type="number" name="miles"/>
               </div>
               <div class="field"> 
                 <p>Ім'я</p>
-                <input type="text" name=""/>
+                <input class="require" type="text" name="name"/>
               </div>
               <div class="field"> 
                 <p>Номер телефону</p>
-                <input type="tel" name=""/>
-              </div><a class="calculate flex ai-center jc-center">
+                <input class="require" id="m-desktop-car" type="phone" name="phone" placeholder="+38(099) 123 45 67" autocomplete="phone"/>
+              </div>
+              <button class="calculate flex ai-center jc-center" type="submit">
                 <p>Розрахувати вартість онлайн</p><svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M9.84113 3.35201L7.50513 1.03201L8.24113 0.312012L11.7611 3.86401L8.24113 7.40001L7.50513 6.68001L9.84113 4.36001L0.609131 4.37601V3.35201H9.84113Z" fill="white"/>
 </svg>
-</a>
+
+              </button>
             </div>
-          </div>
-          <div class="item"><a class="item__head">Інше</a>
+          </form>
+          <form class="item other"><a class="item__head">Інше</a>
             <div class="item__body">
               <div class="field">
                 <p>Назва моделі</p>
-                <input type="number" name=""/>
+                <input type="text" name="model"/>
               </div>
               <div class="field"> 
                 <p>Ім'я</p>
-                <input type="text" name=""/>
+                <input type="text" name="name"/>
               </div>
               <div class="field"> 
                 <p>Номер телефону</p>
-                <input type="tel" name=""/>
-              </div><a class="calculate flex ai-center jc-center">
+                <input id="m-desktop-other" type="phone" name="phone" placeholder="+38(099) 123 45 67" autocomplete="phone"/>
+              </div>
+              <button class="calculate flex ai-center jc-center" type="submit">
                 <p>Розрахувати вартість онлайн</p><svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M9.84113 3.35201L7.50513 1.03201L8.24113 0.312012L11.7611 3.86401L8.24113 7.40001L7.50513 6.68001L9.84113 4.36001L0.609131 4.37601V3.35201H9.84113Z" fill="white"/>
 </svg>
-</a>
+
+              </button>
             </div>
-          </div>
+          </form>
         </div>
       </div>
     </div>
@@ -1218,6 +1174,7 @@
 </a></div>
     </footer>
     <script src="js/main.min.js" defer="defer"></script>
+    <script src="js/axios.js" defer="defer" async="async"></script>
     <script>
       (g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
         ({key: "AIzaSyCY46nrv5pVNPlDX4B2RcVj3aGC1vpxCcg", v: "beta"});
